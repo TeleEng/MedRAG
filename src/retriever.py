@@ -2,6 +2,7 @@ import json
 import pickle
 import numpy as np
 import faiss
+from neo4j import GraphDatabase
 from sentence_transformers import SentenceTransformer, CrossEncoder
 from src import config
 
@@ -19,7 +20,33 @@ class HybridRetriever:
         self.bi_encoder = SentenceTransformer(config.EMBEDDING_MODEL_ID)
         self.cross_encoder = CrossEncoder(config.CROSS_ENCODER_ID)
         
+        print("Connecting to Neo4j Graph Database...")
+        self.driver = GraphDatabase.driver(
+            config.NEO4J_URI, 
+            auth=(config.NEO4J_USERNAME, config.NEO4J_PASSWORD)
+        )
+        
+    def __del__(self):
+        if hasattr(self, 'driver'):
+            self.driver.close()
+
     def retrieve(self, query: str):
+        print("Executing Graph Retrieval...")
+        # 0. Graph Retrieval (Neo4j)
+        graph_docs = []
+        medical_keywords = ["hypertension", "diabetes", "lisinopril", "metformin", "headache", "fever", "insulin"]
+        with self.driver.session() as session:
+            for kw in medical_keywords:
+                if kw in query.lower():
+                    result = session.run(
+                        "MATCH (e:Entity {name: $name})<-[:MENTIONS]-(d:Document) "
+                        "RETURN d.id as doc_id, d.text as text LIMIT 2",
+                        name=kw
+                    )
+                    for record in result:
+                        graph_docs.append({"id": record["doc_id"], "text": record["text"]})
+                        
+        print("Executing FAISS and BM25 Hybrid Search...")
         # 1. Dense Retrieval
         q_emb = self.bi_encoder.encode([query], normalize_embeddings=True).astype("float32")
         dense_scores, dense_ids = self.faiss_index.search(q_emb, config.TOP_K_RETRIEVE)
@@ -47,7 +74,19 @@ class HybridRetriever:
         reranked = sorted(zip(candidate_docs, ce_scores), key=lambda x: x[1], reverse=True)
         final_docs = [doc for doc, score in reranked][:config.TOP_K_RERANK]
         
-        return final_docs
+        # 5. Combine Graph results with Hybrid results
+        all_docs = graph_docs + final_docs
+        
+        # Deduplicate by id
+        seen = set()
+        unique_docs = []
+        for doc in all_docs:
+            if doc["id"] not in seen:
+                seen.add(doc["id"])
+                unique_docs.append(doc)
+                
+        # Return top K docs total
+        return unique_docs[:config.TOP_K_RERANK]
 
 if __name__ == "__main__":
     retriever = HybridRetriever()

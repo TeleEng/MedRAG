@@ -1,5 +1,8 @@
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Base Paths
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,3 +40,13 @@ BATCH_SIZE = 2
 GRAD_ACCUM_STEPS = 4
 LEARNING_RATE = 2e-4
 EPOCHS = 1
+
+# Neo4j Config
+NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
+NEO4J_USERNAME = os.getenv("NEO4J_USERNAME", "neo4j")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "password")
+
+# Translation Config
+TRANSLATOR_MODEL_ID = "facebook/nllb-200-distilled-600M"
+TARGET_LANG = "pes_Arab" # Persian language code in NLLB
+
