@@ -2,7 +2,6 @@ accelerate==0.33.0
 bitsandbytes==0.43.1
 datasets==2.20.0
 faiss-cpu==1.8.0
-numpy==1.26.4
 peft==0.11.1
 rank_bm25==0.2.2
 sentence-transformers==3.0.1
