@@ -11,3 +11,4 @@ ragas==0.1.11
 neo4j==5.23.1
 python-dotenv==1.0.1
 sentencepiece==0.2.0
+numpy>=2.0.0
