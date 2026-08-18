@@ -74,7 +74,7 @@ def train_model():
         model=model,
         train_dataset=dataset,
         peft_config=peft_config,
-        tokenizer=tokenizer,
+        processing_class=tokenizer,
         args=training_args,
         formatting_func=formatting_prompts_func,
     )
