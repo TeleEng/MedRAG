@@ -67,7 +67,7 @@ def train_model():
         fp16=True, # Use fp16 for T4 compatibility, bf16 for Ampere+
         max_grad_norm=0.3,
         warmup_ratio=0.03,
-        max_seq_length=config.MAX_SEQ_LENGTH,
+        max_length=config.MAX_SEQ_LENGTH,
     )
     
     trainer = SFTTrainer(
