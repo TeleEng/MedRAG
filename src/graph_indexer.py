@@ -27,7 +27,7 @@ class GraphIndexer:
         # In a real production system, you would use GLiNER or SpaCy here.
         medical_keywords = ["hypertension", "diabetes", "lisinopril", "metformin", "headache", "fever", "insulin"]
         
-        with self.driver.session() as session:
+        with self.driver.session(database="neo4j") as session:
             # Create constraints
             session.run("CREATE CONSTRAINT IF NOT EXISTS FOR (d:Document) REQUIRE d.id IS UNIQUE")
             session.run("CREATE CONSTRAINT IF NOT EXISTS FOR (e:Entity) REQUIRE e.name IS UNIQUE")

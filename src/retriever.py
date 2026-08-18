@@ -35,7 +35,7 @@ class HybridRetriever:
         # 0. Graph Retrieval (Neo4j)
         graph_docs = []
         medical_keywords = ["hypertension", "diabetes", "lisinopril", "metformin", "headache", "fever", "insulin"]
-        with self.driver.session() as session:
+        with self.driver.session(database="neo4j") as session:
             for kw in medical_keywords:
                 if kw in query.lower():
                     result = session.run(
