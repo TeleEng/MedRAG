@@ -8,7 +8,7 @@ from transformers import (
     TrainingArguments
 )
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
-from trl import SFTTrainer
+from trl import SFTTrainer, SFTConfig
 from src import config
 
 def train_model():
@@ -55,7 +55,7 @@ def train_model():
             output_texts.append(text)
         return output_texts
         
-    training_args = TrainingArguments(
+    training_args = SFTConfig(
         output_dir=str(config.MODELS_DIR / "checkpoints"),
         per_device_train_batch_size=config.BATCH_SIZE,
         gradient_accumulation_steps=config.GRAD_ACCUM_STEPS,
@@ -67,13 +67,13 @@ def train_model():
         fp16=True, # Use fp16 for T4 compatibility, bf16 for Ampere+
         max_grad_norm=0.3,
         warmup_ratio=0.03,
+        max_seq_length=config.MAX_SEQ_LENGTH,
     )
     
     trainer = SFTTrainer(
         model=model,
         train_dataset=dataset,
         peft_config=peft_config,
-        max_seq_length=config.MAX_SEQ_LENGTH,
         tokenizer=tokenizer,
         args=training_args,
         formatting_func=formatting_prompts_func,
