@@ -8,14 +8,25 @@ class GraphIndexer:
         self.db_type = config.GRAPH_DB_TYPE
         print(f"Initializing GraphIndexer in '{self.db_type}' mode...")
         
-        if self.db_type == "neo4j":
-            from neo4j import GraphDatabase
-            print(f"Connecting to Neo4j at {config.NEO4J_URI}...")
-            self.driver = GraphDatabase.driver(
-                config.NEO4J_URI, 
-                auth=(config.NEO4J_USERNAME, config.NEO4J_PASSWORD)
-            )
-        elif self.db_type == "kuzu":
+        if self.db_type in ["auto", "neo4j"]:
+            try:
+                from neo4j import GraphDatabase
+                print(f"Attempting to connect to Neo4j at {config.NEO4J_URI}...")
+                self.driver = GraphDatabase.driver(
+                    config.NEO4J_URI, 
+                    auth=(config.NEO4J_USERNAME, config.NEO4J_PASSWORD)
+                )
+                self.driver.verify_connectivity()
+                self.db_type = "neo4j"
+                print("Successfully connected to Neo4j.")
+            except Exception as e:
+                if self.db_type == "auto":
+                    print(f"Neo4j connection failed: {e}. Falling back to KùzuDB.")
+                    self.db_type = "kuzu"
+                else:
+                    raise e
+                    
+        if self.db_type == "kuzu":
             import kuzu
             # Reset DB directory if it exists to avoid schema conflicts on rebuild
             if config.KUZU_DB_DIR.exists():
@@ -31,8 +42,10 @@ class GraphIndexer:
             self.conn.execute("CREATE NODE TABLE Document (id STRING, text STRING, PRIMARY KEY (id))")
             self.conn.execute("CREATE NODE TABLE Entity (name STRING, PRIMARY KEY (name))")
             self.conn.execute("CREATE REL TABLE MENTIONS (FROM Document TO Entity)")
-        else:
-            raise ValueError(f"Unknown GRAPH_DB_TYPE: {self.db_type}")
+            
+        # Save active db type so retriever knows what we used
+        with open(config.PROCESSED_DATA_DIR / "active_db.txt", "w", encoding="utf-8") as f:
+            f.write(self.db_type)
             
     def close(self):
         if self.db_type == "neo4j":

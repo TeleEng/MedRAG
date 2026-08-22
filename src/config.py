@@ -46,8 +46,8 @@ NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
 NEO4J_USERNAME = os.getenv("NEO4J_USERNAME", "neo4j")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "password")
 
-# Graph Database Toggle ('neo4j' or 'kuzu')
-GRAPH_DB_TYPE = os.getenv("GRAPH_DB_TYPE", "kuzu")
+# Graph Database Toggle ('auto', 'neo4j' or 'kuzu')
+GRAPH_DB_TYPE = os.getenv("GRAPH_DB_TYPE", "auto")
 KUZU_DB_DIR = PROCESSED_DATA_DIR / "kuzu_db"
 
 # Translation Config

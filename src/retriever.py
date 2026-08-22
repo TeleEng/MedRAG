@@ -20,6 +20,15 @@ class HybridRetriever:
         self.cross_encoder = CrossEncoder(config.CROSS_ENCODER_ID)
         
         self.db_type = config.GRAPH_DB_TYPE
+        active_db_path = config.PROCESSED_DATA_DIR / "active_db.txt"
+        
+        if self.db_type == "auto":
+            if active_db_path.exists():
+                with open(active_db_path, "r", encoding="utf-8") as f:
+                    self.db_type = f.read().strip()
+            else:
+                self.db_type = "kuzu"  # Safe default if not found
+                
         print(f"Connecting to Graph Database ({self.db_type})...")
         
         if self.db_type == "neo4j":
