@@ -2,7 +2,6 @@ import json
 import pickle
 import numpy as np
 import faiss
-from neo4j import GraphDatabase
 from sentence_transformers import SentenceTransformer, CrossEncoder
 from src import config
 
@@ -20,31 +19,50 @@ class HybridRetriever:
         self.bi_encoder = SentenceTransformer(config.EMBEDDING_MODEL_ID)
         self.cross_encoder = CrossEncoder(config.CROSS_ENCODER_ID)
         
-        print("Connecting to Neo4j Graph Database...")
-        self.driver = GraphDatabase.driver(
-            config.NEO4J_URI, 
-            auth=(config.NEO4J_USERNAME, config.NEO4J_PASSWORD)
-        )
+        self.db_type = config.GRAPH_DB_TYPE
+        print(f"Connecting to Graph Database ({self.db_type})...")
+        
+        if self.db_type == "neo4j":
+            from neo4j import GraphDatabase
+            self.driver = GraphDatabase.driver(
+                config.NEO4J_URI, 
+                auth=(config.NEO4J_USERNAME, config.NEO4J_PASSWORD)
+            )
+        elif self.db_type == "kuzu":
+            import kuzu
+            self.db = kuzu.Database(str(config.KUZU_DB_DIR))
+            self.conn = kuzu.Connection(self.db)
         
     def __del__(self):
-        if hasattr(self, 'driver'):
+        if hasattr(self, 'driver') and self.db_type == "neo4j":
             self.driver.close()
 
     def retrieve(self, query: str):
         print("Executing Graph Retrieval...")
-        # 0. Graph Retrieval (Neo4j)
         graph_docs = []
         medical_keywords = ["hypertension", "diabetes", "lisinopril", "metformin", "headache", "fever", "insulin"]
-        with self.driver.session(database="neo4j") as session:
-            for kw in medical_keywords:
-                if kw in query.lower():
-                    result = session.run(
+        
+        for kw in medical_keywords:
+            if kw in query.lower():
+                if self.db_type == "neo4j":
+                    with self.driver.session(database="neo4j") as session:
+                        result = session.run(
+                            "MATCH (e:Entity {name: $name})<-[:MENTIONS]-(d:Document) "
+                            "RETURN d.id as doc_id, d.text as text LIMIT 2",
+                            name=kw
+                        )
+                        for record in result:
+                            graph_docs.append({"id": record["doc_id"], "text": record["text"]})
+                elif self.db_type == "kuzu":
+                    # Kuzu query
+                    result = self.conn.execute(
                         "MATCH (e:Entity {name: $name})<-[:MENTIONS]-(d:Document) "
                         "RETURN d.id as doc_id, d.text as text LIMIT 2",
-                        name=kw
+                        {"name": kw}
                     )
-                    for record in result:
-                        graph_docs.append({"id": record["doc_id"], "text": record["text"]})
+                    while result.has_next():
+                        record = result.get_next()
+                        graph_docs.append({"id": record[0], "text": record[1]})
                         
         print("Executing FAISS and BM25 Hybrid Search...")
         # 1. Dense Retrieval

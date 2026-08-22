@@ -46,6 +46,10 @@ NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
 NEO4J_USERNAME = os.getenv("NEO4J_USERNAME", "neo4j")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "password")
 
+# Graph Database Toggle ('neo4j' or 'kuzu')
+GRAPH_DB_TYPE = os.getenv("GRAPH_DB_TYPE", "kuzu")
+KUZU_DB_DIR = PROCESSED_DATA_DIR / "kuzu_db"
+
 # Translation Config
 TRANSLATOR_MODEL_ID = "facebook/nllb-200-distilled-600M"
 TARGET_LANG = "pes_Arab" # Persian language code in NLLB
