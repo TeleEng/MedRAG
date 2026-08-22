@@ -41,8 +41,6 @@ def train_model():
         task_type="CAUSAL_LM",
         target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
     )
-    model = get_peft_model(model, peft_config)
-    model.print_trainable_parameters()
     
     print("Loading training data...")
     dataset = load_dataset("json", data_files=str(config.PROCESSED_DATA_DIR / "train_data.json"), split="train")
