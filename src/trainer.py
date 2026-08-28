@@ -68,14 +68,14 @@ def train_model():
         fp16=True, # Use fp16 for T4 compatibility, bf16 for Ampere+
         max_grad_norm=0.3,
         warmup_ratio=0.03,
-        max_length=config.MAX_SEQ_LENGTH,
+        max_seq_length=config.MAX_SEQ_LENGTH,
     )
     
     trainer = SFTTrainer(
         model=model,
         train_dataset=dataset,
         peft_config=peft_config,
-        processing_class=tokenizer,
+        tokenizer=tokenizer,
         args=training_args,
         formatting_func=formatting_prompts_func,
     )
