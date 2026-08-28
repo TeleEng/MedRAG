@@ -28,7 +28,7 @@ def train_model():
     model = AutoModelForCausalLM.from_pretrained(
         config.BASE_MODEL_ID,
         quantization_config=bnb_config,
-        device_map="auto"
+        device_map={"": 0}
     )
     model.config.use_cache = False
     model = prepare_model_for_kbit_training(model)
@@ -68,14 +68,14 @@ def train_model():
         fp16=True, # Use fp16 for T4 compatibility, bf16 for Ampere+
         max_grad_norm=0.3,
         warmup_ratio=0.03,
-        max_seq_length=config.MAX_SEQ_LENGTH,
+        max_length=config.MAX_SEQ_LENGTH,
     )
     
     trainer = SFTTrainer(
         model=model,
         train_dataset=dataset,
         peft_config=peft_config,
-        tokenizer=tokenizer,
+        processing_class=tokenizer,
         args=training_args,
         formatting_func=formatting_prompts_func,
     )

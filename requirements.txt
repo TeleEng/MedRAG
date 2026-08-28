@@ -6,9 +6,8 @@ peft>=0.11.1
 rank_bm25>=0.2.2
 sentence-transformers>=3.0.1
 transformers>=4.43.3
-trl==0.9.6
+trl>=0.10.1
 neo4j>=5.23.1
 python-dotenv>=1.0.1
 sentencepiece>=0.2.0
 kuzu>=0.4.2
-pandas<2.2.0
