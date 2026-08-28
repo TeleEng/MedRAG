@@ -47,11 +47,14 @@ def train_model():
     
     # We define a formatting function for SFTTrainer
     def formatting_prompts_func(example):
-        output_texts = []
-        for i in range(len(example['instruction'])):
-            text = f"User: {example['instruction'][i]}\n\nAssistant: {example['output'][i]}"
-            output_texts.append(text)
-        return output_texts
+        if isinstance(example.get('instruction'), list):
+            output_texts = []
+            for i in range(len(example['instruction'])):
+                text = f"User: {example['instruction'][i]}\n\nAssistant: {example['output'][i]}"
+                output_texts.append(text)
+            return output_texts
+        else:
+            return f"User: {example['instruction']}\n\nAssistant: {example['output']}"
         
     training_args = SFTConfig(
         output_dir=str(config.MODELS_DIR / "checkpoints"),
