@@ -28,13 +28,16 @@ class GraphIndexer:
                     
         if self.db_type == "kuzu":
             import kuzu
-            # Reset DB directory if it exists to avoid schema conflicts on rebuild
-            if config.KUZU_DB_DIR.exists():
-                shutil.rmtree(config.KUZU_DB_DIR)
-            config.KUZU_DB_DIR.mkdir(parents=True, exist_ok=True)
+            # Reset DB file if it exists to avoid schema conflicts on rebuild
+            db_path = config.KUZU_DB_DIR
+            if db_path.exists():
+                if db_path.is_dir():
+                    shutil.rmtree(db_path)
+                else:
+                    db_path.unlink()
             
-            print(f"Connecting to local KùzuDB at {config.KUZU_DB_DIR}...")
-            self.db = kuzu.Database(str(config.KUZU_DB_DIR))
+            print(f"Connecting to local KùzuDB at {db_path}...")
+            self.db = kuzu.Database(str(db_path))
             self.conn = kuzu.Connection(self.db)
             
             # Create schema for Kuzu (strict schema required)
