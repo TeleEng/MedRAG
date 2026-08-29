@@ -67,7 +67,7 @@ def train_model():
         lr_scheduler_type="cosine",
         max_steps=50, # Set to small number just for Kaggle demo purposes
         logging_steps=10,
-        fp16=True, # Use fp16 for T4 compatibility, bf16 for Ampere+
+        fp16=False, # Disabled to bypass GradScaler bfloat16 crashes on T4
         max_grad_norm=0.3,
         warmup_ratio=0.03,
         max_length=config.MAX_SEQ_LENGTH,
