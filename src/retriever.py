@@ -2,7 +2,12 @@ import json
 import pickle
 import numpy as np
 import faiss
+import spacy
 from sentence_transformers import SentenceTransformer, CrossEncoder
+from langchain_core.retrievers import BaseRetriever
+from langchain_core.documents import Document
+from pydantic import Field
+from typing import Any
 from src import config
 
 class HybridRetriever:
@@ -49,7 +54,13 @@ class HybridRetriever:
     def retrieve(self, query: str):
         print("Executing Graph Retrieval...")
         graph_docs = []
-        medical_keywords = ["hypertension", "diabetes", "lisinopril", "metformin", "headache", "fever", "insulin"]
+        
+        try:
+            nlp = spacy.load("en_core_web_md")
+            spacy_doc = nlp(query.lower())
+            medical_keywords = set(ent.text for ent in spacy_doc.ents if ent.text.strip())
+        except OSError:
+            medical_keywords = set()
         
         for kw in medical_keywords:
             if kw in query.lower():
@@ -114,6 +125,13 @@ class HybridRetriever:
                 
         # Return top K docs total
         return unique_docs[:config.TOP_K_RERANK]
+
+class LangChainMedRAGRetriever(BaseRetriever):
+    hybrid_retriever: Any = Field(default_factory=HybridRetriever)
+    
+    def _get_relevant_documents(self, query: str, *, run_manager=None):
+        docs = self.hybrid_retriever.retrieve(query)
+        return [Document(page_content=d["text"], metadata={"id": d["id"]}) for d in docs]
 
 if __name__ == "__main__":
     retriever = HybridRetriever()

@@ -83,7 +83,13 @@ def train_model():
     )
     
     print("Starting QLoRA Fine-Tuning...")
-    trainer.train()
+    try:
+        trainer.train()
+    except torch.cuda.OutOfMemoryError as e:
+        torch.cuda.empty_cache()
+        print(f"\n[ERROR] CUDA Out Of Memory!")
+        print("Please reduce BATCH_SIZE or MAX_SEQ_LENGTH in src/config.py and try again.")
+        raise e
     
     print("Saving trained adapter...")
     trainer.model.save_pretrained(str(config.MODELS_DIR / "medrag_adapter"))

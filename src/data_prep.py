@@ -53,3 +53,19 @@ def load_and_prepare_data():
 
 if __name__ == "__main__":
     load_and_prepare_data()
+
+
+class InputProcessor:
+    def process(self, raw_input: str) -> str:
+        raise NotImplementedError
+
+class TextInputProcessor(InputProcessor):
+    def process(self, raw_input: str) -> str:
+        return raw_input
+
+class ImageOCRProcessor(InputProcessor):
+    def process(self, raw_input: str) -> str:
+        # raw_input would be a file path to an image
+        # pytesseract.image_to_string(Image.open(raw_input))
+        raise NotImplementedError('OCR not yet implemented')
+

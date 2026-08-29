@@ -1,14 +1,20 @@
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline as hf_pipeline
 from peft import PeftModel
-from src.retriever import HybridRetriever
+from src.retriever import HybridRetriever, LangChainMedRAGRetriever
 from src.translator import MedTranslator
+from src.data_prep import TextInputProcessor
+from langchain_huggingface import HuggingFacePipeline
+from langchain_core.prompts import PromptTemplate
+from langchain_core.runnables import RunnablePassthrough, RunnableLambda
+from langchain_core.output_parsers import StrOutputParser
 from src import config
 
 class MedRAGPipeline:
     def __init__(self):
-        self.retriever = HybridRetriever()
+        self.retriever = LangChainMedRAGRetriever()
         self.translator = MedTranslator()
+        self.input_processor = TextInputProcessor()
         
         print("Loading Qwen Tokenizer...")
         self.tokenizer = AutoTokenizer.from_pretrained(str(config.MODELS_DIR / "medrag_adapter"))
@@ -26,51 +32,57 @@ class MedRAGPipeline:
             str(config.MODELS_DIR / "medrag_adapter")
         )
         self.model.eval()
-
-    def answer_query(self, query_persian: str):
-        print(f"\n[0] Translating User Query from Persian to English...")
-        query_english = self.translator.persian_to_english(query_persian)
-        print(f"Translated Query: '{query_english}'")
         
-        print(f"\n[1] Retrieving Graph and FAISS context for: '{query_english}'")
-        retrieved_docs = self.retriever.retrieve(query_english)
-        
-        context_str = "\n\n".join([f"[Doc {i+1}]: {doc['text']}" for i, doc in enumerate(retrieved_docs)])
-        
-        system_prompt = (
-            "You are a professional medical assistant. "
-            "Answer the User's question using ONLY the provided context. "
-            "You must cite your sources using [Doc X] format."
+        pipe = hf_pipeline(
+            "text-generation",
+            model=self.model,
+            tokenizer=self.tokenizer,
+            max_new_tokens=300,
+            temperature=0.1,
+            top_p=0.9,
+            repetition_penalty=1.15,
+            do_sample=True,
+            return_full_text=False
         )
-        user_prompt = f"Context:\n{context_str}\n\nQuestion: {query_english}"
+        self.llm = HuggingFacePipeline(pipeline=pipe)
         
-        messages = [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt}
-        ]
-        
-        prompt_text = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-        inputs = self.tokenizer(prompt_text, return_tensors="pt").to(self.model.device)
-        
-        print(f"[2] Generating response in English...")
-        with torch.no_grad():
-            outputs = self.model.generate(
-                **inputs,
-                max_new_tokens=300,
-                temperature=0.1,
-                top_p=0.9,
-                repetition_penalty=1.15,
-                do_sample=True,
-            )
+        def format_docs(docs):
+            return "\n\n".join([f"[Doc {i+1}]: {doc.page_content}" for i, doc in enumerate(docs)])
             
-        prompt_length = inputs.input_ids.shape[1]
-        response_english = self.tokenizer.decode(outputs[0][prompt_length:], skip_special_tokens=True)
-        print(f"English Response Generated.")
+        def translate_to_eng(query):
+            print(f"\n[0] Translating User Query to English...")
+            return self.translator.persian_to_english(query)
+            
+        def translate_to_pes(response):
+            print(f"\n[3] Translating English Response back to Persian...")
+            return self.translator.english_to_persian(response)
+            
+        prompt = PromptTemplate.from_template(
+            "<|im_start|>system\nYou are a professional medical assistant. Answer the User's question using ONLY the provided context. You must cite your sources using [Doc X] format.<|im_end|>\n"
+            "<|im_start|>user\nContext:\n{context}\n\nQuestion: {question}<|im_end|>\n<|im_start|>assistant\n"
+        )
         
-        print(f"\n[3] Translating English Response back to Persian...")
-        response_persian = self.translator.english_to_persian(response_english)
+        self.eng_chain = (
+            {"context": self.retriever | format_docs, "question": RunnablePassthrough()}
+            | prompt
+            | self.llm
+            | StrOutputParser()
+        )
         
-        return response_persian, response_english, retrieved_docs
+        self.full_chain = (
+            RunnableLambda(translate_to_eng)
+            | (lambda q: {"eng_query": q, "eng_response": self.eng_chain.invoke(q)})
+            | (lambda x: {"res_pes": translate_to_pes(x["eng_response"]), "res_eng": x["eng_response"]})
+        )
+
+    def answer_query(self, raw_input: str):
+        try:
+            query_persian = self.input_processor.process(raw_input)
+            result = self.full_chain.invoke(query_persian)
+            return result["res_pes"], result["res_eng"], []
+        except Exception as e:
+            print(f"Error during RAG generation: {e}")
+            return "An error occurred", str(e), []
 
 if __name__ == "__main__":
     pipeline = MedRAGPipeline()

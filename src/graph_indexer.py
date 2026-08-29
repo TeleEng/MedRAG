@@ -1,6 +1,7 @@
 import json
 import os
 import shutil
+import spacy
 from src import config
 
 class GraphIndexer:
@@ -62,65 +63,75 @@ class GraphIndexer:
         with open(docs_path, "r", encoding="utf-8") as f:
             documents = json.load(f)
             
-        print(f"Extracting simple entities and building Graph ({self.db_type})...")
-        medical_keywords = ["hypertension", "diabetes", "lisinopril", "metformin", "headache", "fever", "insulin"]
+        print(f"Extracting entities using SpaCy and building Graph ({self.db_type})...")
+        try:
+            nlp = spacy.load("en_core_web_md")
+        except OSError:
+            print("Downloading spacy model en_core_web_md...")
+            from spacy.cli import download
+            download("en_core_web_md")
+            nlp = spacy.load("en_core_web_md")
         
         if self.db_type == "neo4j":
-            self._build_neo4j(documents, medical_keywords)
+            self._build_neo4j(documents, nlp)
         elif self.db_type == "kuzu":
-            self._build_kuzu(documents, medical_keywords)
+            self._build_kuzu(documents, nlp)
             
         print("Graph Indexing Complete!")
 
-    def _build_neo4j(self, documents, medical_keywords):
+    def _build_neo4j(self, documents, nlp):
         with self.driver.session(database="neo4j") as session:
             session.run("CREATE CONSTRAINT IF NOT EXISTS FOR (d:Document) REQUIRE d.id IS UNIQUE")
             session.run("CREATE CONSTRAINT IF NOT EXISTS FOR (e:Entity) REQUIRE e.name IS UNIQUE")
             
             for doc in documents:
                 doc_id = doc["id"]
-                text = doc["text"].lower()
+                text = doc["text"]
                 
                 session.run(
                     "MERGE (d:Document {id: $id}) "
                     "SET d.text = $text",
-                    id=doc_id, text=doc["text"]
+                    id=doc_id, text=text
                 )
                 
-                for keyword in medical_keywords:
-                    if keyword in text:
-                        session.run(
-                            """
-                            MERGE (e:Entity {name: $name})
-                            MERGE (d:Document {id: $doc_id})
-                            MERGE (d)-[:MENTIONS]->(e)
-                            """,
-                            name=keyword, doc_id=doc_id
-                        )
+                spacy_doc = nlp(text)
+                entities = set(ent.text.lower() for ent in spacy_doc.ents if ent.text.strip())
+                
+                for entity in entities:
+                    session.run(
+                        """
+                        MERGE (e:Entity {name: $name})
+                        MERGE (d:Document {id: $doc_id})
+                        MERGE (d)-[:MENTIONS]->(e)
+                        """,
+                        name=entity, doc_id=doc_id
+                    )
 
-    def _build_kuzu(self, documents, medical_keywords):
+    def _build_kuzu(self, documents, nlp):
         # Kuzu syntax: CREATE or MERGE works similarly, but we use MERGE for idempotency
         for doc in documents:
             doc_id = doc["id"]
-            text = doc["text"].lower()
+            text = doc["text"]
             
             # Insert document
             self.conn.execute(
                 "MERGE (d:Document {id: $id}) ON CREATE SET d.text = $text",
-                {"id": doc_id, "text": doc["text"]}
+                {"id": doc_id, "text": text}
             )
             
-            for keyword in medical_keywords:
-                if keyword in text:
-                    self.conn.execute(
-                        "MERGE (e:Entity {name: $name})",
-                        {"name": keyword}
-                    )
-                    self.conn.execute(
-                        "MATCH (d:Document {id: $doc_id}), (e:Entity {name: $name}) "
-                        "MERGE (d)-[:MENTIONS]->(e)",
-                        {"doc_id": doc_id, "name": keyword}
-                    )
+            spacy_doc = nlp(text)
+            entities = set(ent.text.lower() for ent in spacy_doc.ents if ent.text.strip())
+            
+            for entity in entities:
+                self.conn.execute(
+                    "MERGE (e:Entity {name: $name})",
+                    {"name": entity}
+                )
+                self.conn.execute(
+                    "MATCH (d:Document {id: $doc_id}), (e:Entity {name: $name}) "
+                    "MERGE (d)-[:MENTIONS]->(e)",
+                    {"doc_id": doc_id, "name": entity}
+                )
 
 if __name__ == "__main__":
     indexer = GraphIndexer()
