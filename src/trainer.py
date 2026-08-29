@@ -29,7 +29,8 @@ def train_model():
     model = AutoModelForCausalLM.from_pretrained(
         config.BASE_MODEL_ID,
         quantization_config=bnb_config,
-        device_map={"": 0}
+        device_map={"": 0},
+        torch_dtype=torch.float16
     )
     model.config.use_cache = False
     model = prepare_model_for_kbit_training(model)
