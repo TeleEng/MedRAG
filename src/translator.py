@@ -16,7 +16,7 @@ class MedTranslator:
         self.tokenizer.src_lang = src_lang
         inputs = self.tokenizer(text, return_tensors="pt").to(self.model.device)
         
-        tgt_lang_id = self.tokenizer.lang_code_to_id[tgt_lang]
+        tgt_lang_id = self.tokenizer.convert_tokens_to_ids(tgt_lang)
         
         with torch.no_grad():
             outputs = self.model.generate(
