@@ -7,7 +7,7 @@ MedRAG is an end-to-end instruction-tuned Retrieval-Augmented Generation (RAG) p
 The MedRAG architecture is orchestrated using **LangChain** (LCEL), creating a robust, modular, and highly complex pipeline:
 
 1. **Modular Input Processing**: Accepts inputs via a generalized `InputProcessor` interface, future-proofed for Multimodal/OCR medical document ingesting.
-2. **Cross-Lingual Translation**: Leverages Facebook's `nllb-200-distilled-600M` to intercept Persian queries, translate them to English for exact retrieval and reasoning, and translate the final generated answer back to Persian.
+2. **Cross-Lingual Translation**: Leverages Facebook's `nllb-200-distilled-600M` to intercept queries in any language (Persian, Spanish, French, Arabic, Chinese, etc.) using `langid`, translate them to English for exact retrieval and reasoning, and translate the final generated answer back to the user's native language.
 3. **Conversational Memory**: Maintains multi-turn context via dynamic memory injection, allowing the LLM to remember previous medical queries and follow-up questions.
 4. **Hypothetical Document Embeddings (HyDE)**: Before searching the database, MedRAG uses the LLM to generate a hypothetical, "fake" medical answer. This text is appended to the query to radically improve the dense semantic matching.
 5. **Entity Extraction (NER)**: Uses `SpaCy` (`en_core_web_md`) to dynamically extract Named Entities (Diseases, Chemicals, etc.) from the expanded query.
@@ -17,7 +17,7 @@ The MedRAG architecture is orchestrated using **LangChain** (LCEL), creating a r
    - **Sparse Retrieval (BM25)**: Performs keyword-based lexical search.
 7. **Reciprocal Rank Fusion (RRF)**: Merges the FAISS and BM25 results mathematically.
 8. **Cross-Encoder Reranking**: Passes the merged candidate documents through an MS-MARCO Cross-Encoder to re-order them for maximum contextual precision.
-9. **QLoRA Generation**: Generates the final grounded response using a 4-bit Quantized, Instruction-Tuned `Qwen/Qwen2.5-1.5B-Instruct` model, wrapped seamlessly into a `HuggingFacePipeline`.
+9. **QLoRA Generation**: Generates the final grounded response using a 4-bit Quantized, Instruction-Tuned `Qwen/Qwen2.5-1.5B-Instruct` model, wrapped seamlessly into a `HuggingFacePipeline`.`n10. **Automated Evaluation (RAGAS)**: Integrates RAGAS to programmatically evaluate the LLM's answers for hallucinations (Faithfulness) using the local Qwen model as the evaluator.: Generates the final grounded response using a 4-bit Quantized, Instruction-Tuned `Qwen/Qwen2.5-1.5B-Instruct` model, wrapped seamlessly into a `HuggingFacePipeline`.
 
 ## 🛠️ Project Structure
 ```text
