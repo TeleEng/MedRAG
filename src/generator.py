@@ -66,13 +66,13 @@ class MedRAGPipeline:
 
         # HyDE Chain
         hyde_prompt = PromptTemplate.from_template(
-            "<|im_start|>system\nYou are a medical assistant.<|im_end|>\n<|im_start|>user\nWrite a brief, hypothetical medical paragraph answering this question: {question}<|im_end|>\n<|im_start|>assistant\n"
+            "<|im_start|>system\nYou are a medical assistant.<|im_end|>\n{chat_history}<|im_start|>user\nWrite a brief, hypothetical medical paragraph answering this question: {question}<|im_end|>\n<|im_start|>assistant\n"
         )
         self.hyde_chain = hyde_prompt | self.llm | StrOutputParser()
         
         def hyde_retrieval(query: str):
             print("\n[1] Generating Hypothetical Document (HyDE)...")
-            hypothetical_doc = self.hyde_chain.invoke({"question": query})
+            hypothetical_doc = self.hyde_chain.invoke({"question": query, "chat_history": format_history()})
             expanded_query = f"{query}\n{hypothetical_doc}"
             print("\n[2] Executing Hybrid Retrieval with Expanded Query...")
             return self.retriever.invoke(expanded_query)

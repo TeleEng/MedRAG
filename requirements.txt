@@ -21,3 +21,6 @@ langid
 ragas
 pytest
 flake8
+
+langchain-community
+langchain-openai
