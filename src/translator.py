@@ -11,6 +11,7 @@ LANG_MAP = {
     "fr": "fra_Latn",
     "de": "deu_Latn",
     "zh-cn": "zho_Hans",
+    "zh": "zho_Hans",
     "ar": "arb_Arab",
     "ru": "rus_Cyrl",
     "it": "ita_Latn",
