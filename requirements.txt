@@ -1,4 +1,4 @@
-accelerate>=0.33.0
+﻿accelerate>=0.33.0
 bitsandbytes>=0.43.3
 datasets>=2.20.0
 faiss-cpu>=1.8.0
@@ -17,7 +17,7 @@ langchain>=0.2.14
 langchain-community>=0.2.12
 langchain-huggingface>=0.0.3
 spacy>=3.7.5
-langdetect
+langid
 ragas
 pytest
 flake8

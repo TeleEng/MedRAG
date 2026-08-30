@@ -1,7 +1,7 @@
 ﻿import torch
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 from src import config
-import langdetect
+import langid
 
 # Map ISO 639-1 (langdetect) to FLORES-200 (NLLB)
 LANG_MAP = {
@@ -33,7 +33,7 @@ class MedTranslator:
         
     def detect_lang(self, text: str) -> str:
         try:
-            detected = langdetect.detect(text)
+            detected = langid.classify(text)[0]
             return LANG_MAP.get(detected, "eng_Latn") # Default to English if unsupported
         except:
             return "eng_Latn"
