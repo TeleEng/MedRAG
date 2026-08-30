@@ -1,4 +1,4 @@
-import torch
+﻿import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline as hf_pipeline
 from peft import PeftModel
 from src.retriever import HybridRetriever, LangChainMedRAGRetriever
@@ -52,12 +52,12 @@ class MedRAGPipeline:
             return "\n\n".join([f"[Doc {i+1}]: {doc.page_content}" for i, doc in enumerate(docs)])
             
         def translate_to_eng(query):
-            print(f"\n[0] Translating User Query to English...")
-            return self.translator.persian_to_english(query)
+            print(f"\n[0] Detecting Language and Translating to English...")
+            return self.translator.any_to_english(query)
             
-        def translate_to_pes(response):
-            print(f"\n[3] Translating English Response back to Persian...")
-            return self.translator.english_to_persian(response)
+        def translate_to_target(response, target_lang):
+            print(f"\n[3] Translating English Response back to {target_lang}...")
+            return self.translator.english_to_any(response, target_lang)
             
         def format_history():
             if not self.history:
@@ -96,33 +96,37 @@ class MedRAGPipeline:
         
         self.full_chain = (
             RunnableLambda(translate_to_eng)
-            | (lambda q: {"eng_query": q, "eng_response": self.eng_chain.invoke(q)})
-            | (lambda x: {"res_pes": translate_to_pes(x["eng_response"]), "res_eng": x["eng_response"], "eng_query": x["eng_query"]})
+            | (lambda x: {"eng_query": x[0], "original_lang": x[1], "eng_response": self.eng_chain.invoke(x[0])})
+            | (lambda x: {"res_translated": translate_to_target(x["eng_response"], x["original_lang"]), "res_eng": x["eng_response"], "eng_query": x["eng_query"]})
         )
 
     def answer_query(self, raw_input: str):
         try:
-            query_persian = self.input_processor.process(raw_input)
-            result = self.full_chain.invoke(query_persian)
+            query_processed = self.input_processor.process(raw_input)
+            result = self.full_chain.invoke(query_processed)
             
             # Save to memory
             self.history.append((result["eng_query"], result["res_eng"]))
             
-            return result["res_pes"], result["res_eng"], []
+            return result["res_translated"], result["res_eng"], []
         except Exception as e:
             print(f"Error during RAG generation: {e}")
             return "An error occurred", str(e), []
 
 if __name__ == "__main__":
+    import sys
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    
     pipeline = MedRAGPipeline()
-    # "What are the symptoms of diabetes?" in Persian
-    query_pes = "علائم بیماری دیابت چیست؟" 
-    res_pes, res_eng, docs = pipeline.answer_query(query_pes)
+    # Spanish query: "What are the symptoms of diabetes?"
+    query = "¿Cuáles son los síntomas de la diabetes?"
+    res_translated, res_eng, docs = pipeline.answer_query(query)
     
     print("\n" + "="*50)
-    print("MEDRAG PERSIAN ANSWER:")
+    print("MEDRAG TRANSLATED ANSWER:")
     print("="*50)
-    print(res_pes)
+    print(res_translated)
     print("\n" + "="*50)
     print("ORIGINAL ENGLISH ANSWER:")
     print("="*50)

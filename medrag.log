@@ -1,188 +1,192 @@
-7.5s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
-7.5s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
-7.5s 3 0.00s - to python to disable frozen modules.
-7.5s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
-8.2s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
-8.2s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
-8.2s 7 0.00s - to python to disable frozen modules.
-8.2s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
-9.5s 9 Cloning into 'MedRAG'...
-10.4s 10 remote: Enumerating objects: 164, done.[K
-10.4s 11 remote: Counting objects:   0% (1/164)[Kremote: Counting objects:   1% (2/164)[Kremote: Counting objects:   2% (4/164)[Kremote: Counting objects:   3% (5/164)[Kremote: Counting objects:   4% (7/164)[Kremote: Counting objects:   5% (9/164)[Kremote: Counting objects:   6% (10/164)[Kremote: Counting objects:   7% (12/164)[Kremote: Counting objects:   8% (14/164)[Kremote: Counting objects:   9% (15/164)[Kremote: Counting objects:  10% (17/164)[Kremote: Counting objects:  11% (19/164)[Kremote: Counting objects:  12% (20/164)[Kremote: Counting objects:  13% (22/164)[Kremote: Counting objects:  14% (23/164)[Kremote: Counting objects:  15% (25/164)[Kremote: Counting objects:  16% (27/164)[Kremote: Counting objects:  17% (28/164)[Kremote: Counting objects:  18% (30/164)[Kremote: Counting objects:  19% (32/164)[Kremote: Counting objects:  20% (33/164)[Kremote: Counting objects:  21% (35/164)[Kremote: Counting objects:  22% (37/164)[Kremote: Counting objects:  23% (38/164)[Kremote: Counting objects:  24% (40/164)[Kremote: Counting objects:  25% (41/164)[Kremote: Counting objects:  26% (43/164)[Kremote: Counting objects:  27% (45/164)[Kremote: Counting objects:  28% (46/164)[Kremote: Counting objects:  29% (48/164)[Kremote: Counting objects:  30% (50/164)[Kremote: Counting objects:  31% (51/164)[Kremote: Counting objects:  32% (53/164)[Kremote: Counting objects:  33% (55/164)[Kremote: Counting objects:  34% (56/164)[Kremote: Counting objects:  35% (58/164)[Kremote: Counting objects:  36% (60/164)[Kremote: Counting objects:  37% (61/164)[Kremote: Counting objects:  38% (63/164)[Kremote: Counting objects:  39% (64/164)[Kremote: Counting objects:  40% (66/164)[Kremote: Counting objects:  41% (68/164)[Kremote: Counting objects:  42% (69/164)[Kremote: Counting objects:  43% (71/164)[Kremote: Counting objects:  44% (73/164)[Kremote: Counting objects:  45% (74/164)[Kremote: Counting objects:  46% (76/164)[Kremote: Counting objects:  47% (78/164)[Kremote: Counting objects:  48% (79/164)[Kremote: Counting objects:  49% (81/164)[Kremote: Counting objects:  50% (82/164)[Kremote: Counting objects:  51% (84/164)[Kremote: Counting objects:  52% (86/164)[Kremote: Counting objects:  53% (87/164)[Kremote: Counting objects:  54% (89/164)[Kremote: Counting objects:  55% (91/164)[Kremote: Counting objects:  56% (92/164)[Kremote: Counting objects:  57% (94/164)[Kremote: Counting objects:  58% (96/164)[Kremote: Counting objects:  59% (97/164)[Kremote: Counting objects:  60% (99/164)[Kremote: Counting objects:  61% (101/164)[Kremote: Counting objects:  62% (102/164)[Kremote: Counting objects:  63% (104/164)[Kremote: Counting objects:  64% (105/164)[Kremote: Counting objects:  65% (107/164)[Kremote: Counting objects:  66% (109/164)[Kremote: Counting objects:  67% (110/164)[Kremote: Counting objects:  68% (112/164)[Kremote: Counting objects:  69% (114/164)[Kremote: Counting objects:  70% (115/164)[Kremote: Counting objects:  71% (117/164)[Kremote: Counting objects:  72% (119/164)[Kremote: Counting objects:  73% (120/164)[Kremote: Counting objects:  74% (122/164)[Kremote: Counting objects:  75% (123/164)[Kremote: Counting objects:  76% (125/164)[Kremote: Counting objects:  77% (127/164)[Kremote: Counting objects:  78% (128/164)[Kremote: Counting objects:  79% (130/164)[Kremote: Counting objects:  80% (132/164)[Kremote: Counting objects:  81% (133/164)[Kremote: Counting objects:  82% (135/164)[Kremote: Counting objects:  83% (137/164)[Kremote: Counting objects:  84% (138/164)[Kremote: Counting objects:  85% (140/164)[Kremote: Counting objects:  86% (142/164)[Kremote: Counting objects:  87% (143/164)[Kremote: Counting objects:  88% (145/164)[Kremote: Counting objects:  89% (146/164)[Kremote: Counting objects:  90% (148/164)[Kremote: Counting objects:  91% (150/164)[Kremote: Counting objects:  92% (151/164)[Kremote: Counting objects:  93% (153/164)[Kremote: Counting objects:  94% (155/164)[Kremote: Counting objects:  95% (156/164)[Kremote: Counting objects:  96% (158/164)[Kremote: Counting objects:  97% (160/164)[Kremote: Counting objects:  98% (161/164)[Kremote: Counting objects:  99% (163/164)[Kremote: Counting objects: 100% (164/164)[Kremote: Counting objects: 100% (164/164), done.[K
-10.4s 12 remote: Compressing objects:   0% (1/115)[Kremote: Compressing objects:   1% (2/115)[Kremote: Compressing objects:   2% (3/115)[Kremote: Compressing objects:   3% (4/115)[Kremote: Compressing objects:   4% (5/115)[Kremote: Compressing objects:   5% (6/115)[Kremote: Compressing objects:   6% (7/115)[Kremote: Compressing objects:   7% (9/115)[Kremote: Compressing objects:   8% (10/115)[Kremote: Compressing objects:   9% (11/115)[Kremote: Compressing objects:  10% (12/115)[Kremote: Compressing objects:  11% (13/115)[Kremote: Compressing objects:  12% (14/115)[Kremote: Compressing objects:  13% (15/115)[Kremote: Compressing objects:  14% (17/115)[Kremote: Compressing objects:  15% (18/115)[Kremote: Compressing objects:  16% (19/115)[Kremote: Compressing objects:  17% (20/115)[Kremote: Compressing objects:  18% (21/115)[Kremote: Compressing objects:  19% (22/115)[Kremote: Compressing objects:  20% (23/115)[Kremote: Compressing objects:  21% (25/115)[Kremote: Compressing objects:  22% (26/115)[Kremote: Compressing objects:  23% (27/115)[Kremote: Compressing objects:  24% (28/115)[Kremote: Compressing objects:  25% (29/115)[Kremote: Compressing objects:  26% (30/115)[Kremote: Compressing objects:  27% (32/115)[Kremote: Compressing objects:  28% (33/115)[Kremote: Compressing objects:  29% (34/115)[Kremote: Compressing objects:  30% (35/115)[Kremote: Compressing objects:  31% (36/115)[Kremote: Compressing objects:  32% (37/115)[Kremote: Compressing objects:  33% (38/115)[Kremote: Compressing objects:  34% (40/115)[Kremote: Compressing objects:  35% (41/115)[Kremote: Compressing objects:  36% (42/115)[Kremote: Compressing objects:  37% (43/115)[Kremote: Compressing objects:  38% (44/115)[Kremote: Compressing objects:  39% (45/115)[Kremote: Compressing objects:  40% (46/115)[Kremote: Compressing objects:  41% (48/115)[Kremote: Compressing objects:  42% (49/115)[Kremote: Compressing objects:  43% (50/115)[Kremote: Compressing objects:  44% (51/115)[Kremote: Compressing objects:  45% (52/115)[Kremote: Compressing objects:  46% (53/115)[Kremote: Compressing objects:  47% (55/115)[Kremote: Compressing objects:  48% (56/115)[Kremote: Compressing objects:  49% (57/115)[Kremote: Compressing objects:  50% (58/115)[Kremote: Compressing objects:  51% (59/115)[Kremote: Compressing objects:  52% (60/115)[Kremote: Compressing objects:  53% (61/115)[Kremote: Compressing objects:  54% (63/115)[Kremote: Compressing objects:  55% (64/115)[Kremote: Compressing objects:  56% (65/115)[Kremote: Compressing objects:  57% (66/115)[Kremote: Compressing objects:  58% (67/115)[Kremote: Compressing objects:  59% (68/115)[Kremote: Compressing objects:  60% (69/115)[Kremote: Compressing objects:  61% (71/115)[Kremote: Compressing objects:  62% (72/115)[Kremote: Compressing objects:  63% (73/115)[Kremote: Compressing objects:  64% (74/115)[Kremote: Compressing objects:  65% (75/115)[Kremote: Compressing objects:  66% (76/115)[Kremote: Compressing objects:  67% (78/115)[Kremote: Compressing objects:  68% (79/115)[Kremote: Compressing objects:  69% (80/115)[Kremote: Compressing objects:  70% (81/115)[Kremote: Compressing objects:  71% (82/115)[Kremote: Compressing objects:  72% (83/115)[Kremote: Compressing objects:  73% (84/115)[Kremote: Compressing objects:  74% (86/115)[Kremote: Compressing objects:  75% (87/115)[Kremote: Compressing objects:  76% (88/115)[Kremote: Compressing objects:  77% (89/115)[Kremote: Compressing objects:  78% (90/115)[Kremote: Compressing objects:  79% (91/115)[Kremote: Compressing objects:  80% (92/115)[Kremote: Compressing objects:  81% (94/115)[Kremote: Compressing objects:  82% (95/115)[Kremote: Compressing objects:  83% (96/115)[Kremote: Compressing objects:  84% (97/115)[Kremote: Compressing objects:  85% (98/115)[Kremote: Compressing objects:  86% (99/115)[Kremote: Compressing objects:  87% (101/115)[Kremote: Compressing objects:  88% (102/115)[Kremote: Compressing objects:  89% (103/115)[Kremote: Compressing objects:  90% (104/115)[Kremote: Compressing objects:  91% (105/115)[Kremote: Compressing objects:  92% (106/115)[Kremote: Compressing objects:  93% (107/115)[Kremote: Compressing objects:  94% (109/115)[Kremote: Compressing objects:  95% (110/115)[Kremote: Compressing objects:  96% (111/115)[Kremote: Compressing objects:  97% (112/115)[Kremote: Compressing objects:  98% (113/115)[Kremote: Compressing objects:  99% (114/115)[Kremote: Compressing objects: 100% (115/115)[Kremote: Compressing objects: 100% (115/115), done.[K
-10.4s 13 Receiving objects:   0% (1/164)Receiving objects:   1% (2/164)Receiving objects:   2% (4/164)Receiving objects:   3% (5/164)Receiving objects:   4% (7/164)Receiving objects:   5% (9/164)Receiving objects:   6% (10/164)Receiving objects:   7% (12/164)Receiving objects:   8% (14/164)Receiving objects:   9% (15/164)Receiving objects:  10% (17/164)Receiving objects:  11% (19/164)Receiving objects:  12% (20/164)Receiving objects:  13% (22/164)Receiving objects:  14% (23/164)Receiving objects:  15% (25/164)Receiving objects:  16% (27/164)Receiving objects:  17% (28/164)Receiving objects:  18% (30/164)Receiving objects:  19% (32/164)Receiving objects:  20% (33/164)Receiving objects:  21% (35/164)Receiving objects:  22% (37/164)Receiving objects:  23% (38/164)Receiving objects:  24% (40/164)Receiving objects:  25% (41/164)Receiving objects:  26% (43/164)Receiving objects:  27% (45/164)Receiving objects:  28% (46/164)Receiving objects:  29% (48/164)Receiving objects:  30% (50/164)Receiving objects:  31% (51/164)Receiving objects:  32% (53/164)Receiving objects:  33% (55/164)Receiving objects:  34% (56/164)Receiving objects:  35% (58/164)Receiving objects:  36% (60/164)Receiving objects:  37% (61/164)Receiving objects:  38% (63/164)Receiving objects:  39% (64/164)remote: Total 164 (delta 95), reused 113 (delta 48), pack-reused 0 (from 0)[K
-10.4s 14 Receiving objects:  40% (66/164)Receiving objects:  41% (68/164)Receiving objects:  42% (69/164)Receiving objects:  43% (71/164)Receiving objects:  44% (73/164)Receiving objects:  45% (74/164)Receiving objects:  46% (76/164)Receiving objects:  47% (78/164)Receiving objects:  48% (79/164)Receiving objects:  49% (81/164)Receiving objects:  50% (82/164)Receiving objects:  51% (84/164)Receiving objects:  52% (86/164)Receiving objects:  53% (87/164)Receiving objects:  54% (89/164)Receiving objects:  55% (91/164)Receiving objects:  56% (92/164)Receiving objects:  57% (94/164)Receiving objects:  58% (96/164)Receiving objects:  59% (97/164)Receiving objects:  60% (99/164)Receiving objects:  61% (101/164)Receiving objects:  62% (102/164)Receiving objects:  63% (104/164)Receiving objects:  64% (105/164)Receiving objects:  65% (107/164)Receiving objects:  66% (109/164)Receiving objects:  67% (110/164)Receiving objects:  68% (112/164)Receiving objects:  69% (114/164)Receiving objects:  70% (115/164)Receiving objects:  71% (117/164)Receiving objects:  72% (119/164)Receiving objects:  73% (120/164)Receiving objects:  74% (122/164)Receiving objects:  75% (123/164)Receiving objects:  76% (125/164)Receiving objects:  77% (127/164)Receiving objects:  78% (128/164)Receiving objects:  79% (130/164)Receiving objects:  80% (132/164)Receiving objects:  81% (133/164)Receiving objects:  82% (135/164)Receiving objects:  83% (137/164)Receiving objects:  84% (138/164)Receiving objects:  85% (140/164)Receiving objects:  86% (142/164)Receiving objects:  87% (143/164)Receiving objects:  88% (145/164)Receiving objects:  89% (146/164)Receiving objects:  90% (148/164)Receiving objects:  91% (150/164)Receiving objects:  92% (151/164)Receiving objects:  93% (153/164)Receiving objects:  94% (155/164)Receiving objects:  95% (156/164)Receiving objects:  96% (158/164)Receiving objects:  97% (160/164)Receiving objects:  98% (161/164)Receiving objects:  99% (163/164)Receiving objects: 100% (164/164)Receiving objects: 100% (164/164), 135.50 KiB | 13.55 MiB/s, done.
-10.4s 15 Resolving deltas:   0% (0/95)Resolving deltas:   1% (1/95)Resolving deltas:   2% (2/95)Resolving deltas:   3% (3/95)Resolving deltas:   4% (4/95)Resolving deltas:   5% (5/95)Resolving deltas:   6% (6/95)Resolving deltas:   7% (7/95)Resolving deltas:   8% (8/95)Resolving deltas:   9% (9/95)Resolving deltas:  10% (10/95)Resolving deltas:  11% (11/95)Resolving deltas:  12% (12/95)Resolving deltas:  13% (13/95)Resolving deltas:  14% (14/95)Resolving deltas:  15% (15/95)Resolving deltas:  16% (16/95)Resolving deltas:  17% (17/95)Resolving deltas:  18% (18/95)Resolving deltas:  20% (19/95)Resolving deltas:  21% (20/95)Resolving deltas:  22% (21/95)Resolving deltas:  23% (22/95)Resolving deltas:  24% (23/95)Resolving deltas:  26% (25/95)Resolving deltas:  27% (26/95)Resolving deltas:  28% (27/95)Resolving deltas:  29% (28/95)Resolving deltas:  30% (29/95)Resolving deltas:  31% (30/95)Resolving deltas:  32% (31/95)Resolving deltas:  33% (32/95)Resolving deltas:  34% (33/95)Resolving deltas:  35% (34/95)Resolving deltas:  36% (35/95)Resolving deltas:  37% (36/95)Resolving deltas:  38% (37/95)Resolving deltas:  40% (38/95)Resolving deltas:  42% (40/95)Resolving deltas:  43% (41/95)Resolving deltas:  44% (42/95)Resolving deltas:  45% (43/95)Resolving deltas:  46% (44/95)Resolving deltas:  47% (45/95)Resolving deltas:  48% (46/95)Resolving deltas:  49% (47/95)Resolving deltas:  50% (48/95)Resolving deltas:  51% (49/95)Resolving deltas:  52% (50/95)Resolving deltas:  53% (51/95)Resolving deltas:  54% (52/95)Resolving deltas:  55% (53/95)Resolving deltas:  56% (54/95)Resolving deltas:  57% (55/95)Resolving deltas:  58% (56/95)Resolving deltas:  60% (57/95)Resolving deltas:  61% (58/95)Resolving deltas:  62% (59/95)Resolving deltas:  63% (60/95)Resolving deltas:  64% (61/95)Resolving deltas:  65% (62/95)Resolving deltas:  66% (63/95)Resolving deltas:  67% (64/95)Resolving deltas:  68% (65/95)Resolving deltas:  69% (66/95)Resolving deltas:  70% (67/95)Resolving deltas:  72% (69/95)Resolving deltas:  73% (70/95)Resolving deltas:  74% (71/95)Resolving deltas:  75% (72/95)Resolving deltas:  76% (73/95)Resolving deltas:  77% (74/95)Resolving deltas:  78% (75/95)Resolving deltas:  80% (76/95)Resolving deltas:  81% (77/95)Resolving deltas:  82% (78/95)Resolving deltas:  83% (79/95)Resolving deltas:  84% (80/95)Resolving deltas:  85% (81/95)Resolving deltas:  86% (82/95)Resolving deltas:  87% (83/95)Resolving deltas:  88% (84/95)Resolving deltas:  89% (85/95)Resolving deltas:  90% (86/95)Resolving deltas:  91% (87/95)Resolving deltas:  92% (88/95)Resolving deltas:  93% (89/95)Resolving deltas:  94% (90/95)Resolving deltas:  95% (91/95)Resolving deltas:  96% (92/95)Resolving deltas:  97% (93/95)Resolving deltas:  98% (94/95)Resolving deltas: 100% (95/95)Resolving deltas: 100% (95/95), done.
-10.5s 16 === Repository Version Info ===
-10.5s 17 Commit: f833df0 | Date: Sat Aug 29 06:08:47 2026 -0500
-10.7s 18 ===============================
-15.7s 19 [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/43.1 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.1/43.1 MB[0m [31m35.0 MB/s[0m eta [36m0:00:02[0m[2K   [91m━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m7.5/43.1 MB[0m [31m109.1 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m14.5/43.1 MB[0m [31m205.7 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━[0m [32m22.1/43.1 MB[0m [31m214.0 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━[0m [32m29.5/43.1 MB[0m [31m213.2 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━[0m [32m36.8/43.1 MB[0m [31m213.3 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m43.1/43.1 MB[0m [31m232.2 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m43.1/43.1 MB[0m [31m232.2 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m43.1/43.1 MB[0m [31m232.2 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m43.1/43.1 MB[0m [31m232.2 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m43.1/43.1 MB[0m [31m232.2 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m43.1/43.1 MB[0m [31m46.5 MB/s[0m eta [36m0:00:00[0m
-15.9s 20 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/18.8 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━━━[0m [32m7.9/18.8 MB[0m [31m238.1 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━[0m [32m17.2/18.8 MB[0m [31m259.2 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m18.8/18.8 MB[0m [31m267.0 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m18.8/18.8 MB[0m [31m267.0 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m18.8/18.8 MB[0m [31m88.9 MB/s[0m eta [36m0:00:00[0m
-15.9s 21 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/992.6 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m992.6/992.6 kB[0m [31m52.5 MB/s[0m eta [36m0:00:00[0m
-16.0s 22 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/331.5 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m331.5/331.5 kB[0m [31m21.0 MB/s[0m eta [36m0:00:00[0m
-16.0s 23 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/7.6 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m7.6/7.6 MB[0m [31m254.8 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m7.6/7.6 MB[0m [31m116.1 MB/s[0m eta [36m0:00:00[0m
-16.1s 24 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/3.4 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m3.4/3.4 MB[0m [31m272.8 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.4/3.4 MB[0m [31m94.4 MB/s[0m eta [36m0:00:00[0m
-16.1s 25 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/2.4 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.4/2.4 MB[0m [31m82.5 MB/s[0m eta [36m0:00:00[0m
-16.2s 26 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/1.0 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.0/1.0 MB[0m [31m51.3 MB/s[0m eta [36m0:00:00[0m
-16.2s 27 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/571.5 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m571.5/571.5 kB[0m [31m34.4 MB/s[0m eta [36m0:00:00[0m
-16.2s 28 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/73.1 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m73.1/73.1 kB[0m [31m5.2 MB/s[0m eta [36m0:00:00[0m
-26.5s 29 [?25h[31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-26.5s 30 bigframes 2.39.0 requires google-cloud-bigquery-storage<3.0.0,>=2.30.0, which is not installed.
-26.5s 31 google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
-26.5s 32 google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.
-26.5s 33 google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.
-26.5s 34 google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.34.2 which is incompatible.
-26.5s 35 moviepy 1.0.3 requires decorator<5.0,>=4.0.2, but you have decorator 5.3.1 which is incompatible.[0m[31m
-27.3s 36 [0mNeo4j Secrets Loaded Successfully!
-31.4s 37 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-31.4s 38 
-31.4s 39 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-31.4s 40 Loading dataset medalpaca/medical_meadow_wikidoc...
-34.4s 41 Processing documents and creating training pairs...
-34.7s 42 Saved 9373 documents to /kaggle/working/MedRAG/data/processed/documents.json
-34.7s 43 Saved 9373 training samples to /kaggle/working/MedRAG/data/processed/train_data.json
-61.2s 44 Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 2.10.0+cu128).
-61.2s 45 
-61.2s 46 Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 2.10.0+cu128).
-71.0s 47 Building Dense Index for 9373 documents...
-73.9s 48 BertModel LOAD REPORT from: sentence-transformers/all-MiniLM-L6-v2
-73.9s 49 Key                     | Status     |  |
-73.9s 50 ------------------------+------------+--+-
-73.9s 51 embeddings.position_ids | UNEXPECTED |  |
-73.9s 52 
-73.9s 53 Notes:
-73.9s 54 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
-73.9s 55 
-73.9s 56 BertModel LOAD REPORT from: sentence-transformers/all-MiniLM-L6-v2
-73.9s 57 Key                     | Status     |  |
-73.9s 58 ------------------------+------------+--+-
-73.9s 59 embeddings.position_ids | UNEXPECTED |  |
-73.9s 60 
-73.9s 61 Notes:
-73.9s 62 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
-90.3s 63 Dense Index saved to /kaggle/working/MedRAG/data/processed/faiss_index.bin
-90.3s 64 Building BM25 Sparse Index...
-91.2s 65 BM25 Index saved to /kaggle/working/MedRAG/data/processed/bm25_index.pkl
-91.2s 66 Initializing GraphIndexer in 'auto' mode...
-91.2s 67 Attempting to connect to Neo4j at neo4j+s://2fa211c8.databases.neo4j.io...
-91.2s 68 Neo4j connection failed: Failed to DNS resolve address 2fa211c8.databases.neo4j.io:7687: [Errno -2] Name or service not known. Falling back to KùzuDB.
-91.2s 69 Connecting to local KùzuDB at /kaggle/working/MedRAG/data/processed/kuzu_db...
-91.2s 70 Creating KùzuDB Schema...
-91.4s 71 Extracting entities using SpaCy and building Graph (kuzu)...
-91.4s 72 Downloading spacy model en_core_web_md...
-92.4s 73 Collecting en-core-web-md==3.8.0
-92.6s 74 Collecting en-core-web-md==3.8.0
-92.6s 75 Downloading https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.8.0/en_core_web_md-3.8.0-py3-none-any.whl (33.5 MB)
-92.8s 76 Downloading https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.8.0/en_core_web_md-3.8.0-py3-none-any.whl (33.5 MB)
-93.0s 77 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.5/33.5 MB 57.4 MB/s eta 0:00:00
-93.2s 78 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.5/33.5 MB 57.4 MB/s eta 0:00:00
-95.0s 79 Installing collected packages: en-core-web-md
-95.2s 80 Installing collected packages: en-core-web-md
-95.4s 81 Successfully installed en-core-web-md-3.8.0
-95.8s 82 Successfully installed en-core-web-md-3.8.0
-95.8s 83 [38;5;2m✔ Download and installation successful[0m
-95.8s 84 You can now load the package via spacy.load('en_core_web_md')
-95.8s 85 [38;5;3m⚠ Restart to reload dependencies[0m
-95.8s 86 If you are in a Jupyter or Colab notebook, you may need to restart Python in
-95.8s 87 order to load all the package's dependencies. You can do this by selecting the
-95.8s 88 'Restart kernel' or 'Restart runtime' option.
-1375.1s 89 Graph Indexing Complete!
-1377.7s 90 Loading tokenizer and configuring formatting...
-1379.6s 91 `torch_dtype` is deprecated! Use `dtype` instead!
-1379.6s 92 
-1379.6s 93 `torch_dtype` is deprecated! Use `dtype` instead!
-1379.6s 94 Loading QLoRA configuration...
-1379.6s 95 Loading Base Model: Qwen/Qwen2.5-1.5B-Instruct
-1406.5s 96 Loading training data...
-1406.8s 97 warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
-1406.8s 98 
-1406.8s 99 warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
-1425.1s 100 The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151645}.
-1425.1s 101 
-1425.1s 102 The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151645}.
-1425.1s 103 Starting QLoRA Fine-Tuning...
-2149.8s 104 Saving trained adapter...
-2150.0s 105 Training complete! Run generator.py for end-to-end RAG.
-2151.6s 106 Loading documents and indexes...
-2152.7s 107 BertModel LOAD REPORT from: sentence-transformers/all-MiniLM-L6-v2
-2152.7s 108 Key                     | Status     |  |
-2152.7s 109 ------------------------+------------+--+-
-2152.7s 110 embeddings.position_ids | UNEXPECTED |  |
-2152.7s 111 
-2152.7s 112 Notes:
-2152.7s 113 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
-2152.7s 114 
-2152.7s 115 BertModel LOAD REPORT from: sentence-transformers/all-MiniLM-L6-v2
-2152.7s 116 Key                     | Status     |  |
-2152.7s 117 ------------------------+------------+--+-
-2152.7s 118 embeddings.position_ids | UNEXPECTED |  |
-2152.7s 119 
-2152.7s 120 Notes:
-2152.7s 121 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
-2156.9s 122 BertForSequenceClassification LOAD REPORT from: cross-encoder/ms-marco-MiniLM-L-6-v2
-2156.9s 123 Key                          | Status     |  |
-2156.9s 124 -----------------------------+------------+--+-
-2156.9s 125 bert.embeddings.position_ids | UNEXPECTED |  |
-2156.9s 126 
-2156.9s 127 Notes:
-2156.9s 128 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
-2156.9s 129 
-2156.9s 130 BertForSequenceClassification LOAD REPORT from: cross-encoder/ms-marco-MiniLM-L-6-v2
-2156.9s 131 Key                          | Status     |  |
-2156.9s 132 -----------------------------+------------+--+-
-2156.9s 133 bert.embeddings.position_ids | UNEXPECTED |  |
-2156.9s 134 
-2156.9s 135 Notes:
-2156.9s 136 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
-2160.3s 137 Connecting to Graph Database (kuzu)...
-2160.3s 138 Loading Translation Module (NLLB-200)...
-2175.4s 139 The tied weights mapping and config for this model specifies to tie model.shared.weight to lm_head.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
-2175.4s 140 
-2175.4s 141 The tied weights mapping and config for this model specifies to tie model.shared.weight to lm_head.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
-2175.4s 142 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.decoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
-2175.4s 143 
-2175.4s 144 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.decoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
-2175.5s 145 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.encoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
-2175.5s 146 
-2175.5s 147 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.encoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
-2183.9s 148 Loading Qwen Tokenizer...
-2185.4s 149 Loading Base Model for Generation...
-2188.4s 150 Loading trained QLoRA adapter...
-2188.7s 151 Passing `generation_config` together with generation-related arguments=({'do_sample', 'max_new_tokens', 'repetition_penalty', 'top_p', 'temperature'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
-2188.7s 152 
-2188.7s 153 Passing `generation_config` together with generation-related arguments=({'do_sample', 'max_new_tokens', 'repetition_penalty', 'top_p', 'temperature'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
-2188.9s 154 
-2188.9s 155 [0] Translating User Query to English...
-2189.3s 156 Executing Graph Retrieval...
-2189.3s 157 /usr/local/lib/python3.12/dist-packages/spacy/util.py:1800: UserWarning: [W111] Jupyter notebook detected: if using `prefer_gpu()` or `require_gpu()`, include it in the same cell right before `spacy.load()` to ensure that the model is loaded on the correct device. More information: http://spacy.io/usage/v3#jupyter-notebook-gpu
-2189.3s 158 warnings.warn(Warnings.W111)
-2189.3s 159 
-2189.3s 160 /usr/local/lib/python3.12/dist-packages/spacy/util.py:1800: UserWarning: [W111] Jupyter notebook detected: if using `prefer_gpu()` or `require_gpu()`, include it in the same cell right before `spacy.load()` to ensure that the model is loaded on the correct device. More information: http://spacy.io/usage/v3#jupyter-notebook-gpu
-2189.3s 161 warnings.warn(Warnings.W111)
-2190.9s 162 Both `max_new_tokens` (=300) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
-2190.9s 163 
-2190.9s 164 Both `max_new_tokens` (=300) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
-2190.9s 165 Executing FAISS and BM25 Hybrid Search...
-2204.9s 166 
-2204.9s 167 [3] Translating English Response back to Persian...
-2207.3s 168 
-2207.3s 169 ==========================
-2207.3s 170 MEDRAG PERSIAN ANSWER:
-2207.3s 171 ==========================
-2207.3s 172 پیش بینی بالینی دیابت شامل سه دسته اصلی است: دیابت انسپیدوس، دیابت نوع یک، و دیابت نوع دو. دیابت انسپیدوس دارای ادرار بیش از حد و تشنه شدید است. بیماران جوان تر اغلب از طریق ادرار مکرر دچار تهوع یا استفراغ می شوند. بزرگسالان مسن مبتلا به دیابت انسپیدوس معمولاً هیچ نشانه دیگری را به جز افزایش ادرار و تشنه نشان نمی دهند. دیابت نوع یک دارای علائم کلاسیک مانند کاهش وزن غیر قابل توضیح، خستگی، ضعف بینایی، خشک دهان، مکرر ادرار و تشنه شدید است. بیماران نیز تمایل دارند که بیشتر از همیشه تحریک شوند. دیابت نوع دو معمولاً باعث بروز علائم کمتر قابل توجهی مانند احساس خستگی، داشتن مشکل کنترل قند خون، تشنگی مکرر، نیاز به رفتن به حمام در طول شب و تجربه کردن ضعف بینایی است.
-2207.3s 173 
-2207.3s 174 ==========================
-2207.3s 175 ORIGINAL ENGLISH ANSWER:
-2207.3s 176 ==========================
-2207.3s 177 The clinical presentation of diabetes includes three main categories: Diabetes Insipidus, Type I Diabetes Mellitus, and Type II Diabetes Mellitus.
-2207.3s 178 Diabetes Insipidus presents with excessive urination and extreme thirst. Younger patients often experience nausea or vomiting due to frequent urination. Older adults who suffer from diabetes insipidus usually do not show any other symptoms besides increased urination and thirst.
-2207.3s 179 Type I Diabetes Mellitus has classic symptoms such as unexplained weight loss, fatigue, blurred vision, dry mouth, frequent urination, and extreme thirst. Patients also tend to be more irritable than usual.
-2207.3s 180 Type II Diabetes Mellitus typically causes less noticeable symptoms like feeling tired all the time, having trouble controlling their blood sugar levels, being thirsty frequently, needing to go to the bathroom many times during the night, and experiencing blurry vision.
-2213.3s 181 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
-2213.3s 182 cells[i][c] = re.sub('\\\\\|', '|', cell)
-2213.5s 183 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
-2213.5s 184 text = re.sub(r'_', '\_', text) # Escape underscores in display text
-2214.2s 185 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
-2214.6s 186 [NbConvertApp] Writing 606409 bytes to __notebook__.ipynb
-2217.0s 187 [NbConvertApp] Converting notebook __notebook__.ipynb to html
-2217.9s 188 [NbConvertApp] Writing 765120 bytes to __results__.html
+7.4s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.4s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.4s 3 0.00s - to python to disable frozen modules.
+7.4s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.0s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.0s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.0s 7 0.00s - to python to disable frozen modules.
+8.0s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+9.4s 9 Cloning into 'MedRAG'...
+10.0s 10 remote: Enumerating objects: 176, done.[K
+10.0s 11 remote: Counting objects:   0% (1/176)[Kremote: Counting objects:   1% (2/176)[Kremote: Counting objects:   2% (4/176)[Kremote: Counting objects:   3% (6/176)[Kremote: Counting objects:   4% (8/176)[Kremote: Counting objects:   5% (9/176)[Kremote: Counting objects:   6% (11/176)[Kremote: Counting objects:   7% (13/176)[Kremote: Counting objects:   8% (15/176)[Kremote: Counting objects:   9% (16/176)[Kremote: Counting objects:  10% (18/176)[Kremote: Counting objects:  11% (20/176)[Kremote: Counting objects:  12% (22/176)[Kremote: Counting objects:  13% (23/176)[Kremote: Counting objects:  14% (25/176)[Kremote: Counting objects:  15% (27/176)[Kremote: Counting objects:  16% (29/176)[Kremote: Counting objects:  17% (30/176)[Kremote: Counting objects:  18% (32/176)[Kremote: Counting objects:  19% (34/176)[Kremote: Counting objects:  20% (36/176)[Kremote: Counting objects:  21% (37/176)[Kremote: Counting objects:  22% (39/176)[Kremote: Counting objects:  23% (41/176)[Kremote: Counting objects:  24% (43/176)[Kremote: Counting objects:  25% (44/176)[Kremote: Counting objects:  26% (46/176)[Kremote: Counting objects:  27% (48/176)[Kremote: Counting objects:  28% (50/176)[Kremote: Counting objects:  29% (52/176)[Kremote: Counting objects:  30% (53/176)[Kremote: Counting objects:  31% (55/176)[Kremote: Counting objects:  32% (57/176)[Kremote: Counting objects:  33% (59/176)[Kremote: Counting objects:  34% (60/176)[Kremote: Counting objects:  35% (62/176)[Kremote: Counting objects:  36% (64/176)[Kremote: Counting objects:  37% (66/176)[Kremote: Counting objects:  38% (67/176)[Kremote: Counting objects:  39% (69/176)[Kremote: Counting objects:  40% (71/176)[Kremote: Counting objects:  41% (73/176)[Kremote: Counting objects:  42% (74/176)[Kremote: Counting objects:  43% (76/176)[Kremote: Counting objects:  44% (78/176)[Kremote: Counting objects:  45% (80/176)[Kremote: Counting objects:  46% (81/176)[Kremote: Counting objects:  47% (83/176)[Kremote: Counting objects:  48% (85/176)[Kremote: Counting objects:  49% (87/176)[Kremote: Counting objects:  50% (88/176)[Kremote: Counting objects:  51% (90/176)[Kremote: Counting objects:  52% (92/176)[Kremote: Counting objects:  53% (94/176)[Kremote: Counting objects:  54% (96/176)[Kremote: Counting objects:  55% (97/176)[Kremote: Counting objects:  56% (99/176)[Kremote: Counting objects:  57% (101/176)[Kremote: Counting objects:  58% (103/176)[Kremote: Counting objects:  59% (104/176)[Kremote: Counting objects:  60% (106/176)[Kremote: Counting objects:  61% (108/176)[Kremote: Counting objects:  62% (110/176)[Kremote: Counting objects:  63% (111/176)[Kremote: Counting objects:  64% (113/176)[Kremote: Counting objects:  65% (115/176)[Kremote: Counting objects:  66% (117/176)[Kremote: Counting objects:  67% (118/176)[Kremote: Counting objects:  68% (120/176)[Kremote: Counting objects:  69% (122/176)[Kremote: Counting objects:  70% (124/176)[Kremote: Counting objects:  71% (125/176)[Kremote: Counting objects:  72% (127/176)[Kremote: Counting objects:  73% (129/176)[Kremote: Counting objects:  74% (131/176)[Kremote: Counting objects:  75% (132/176)[Kremote: Counting objects:  76% (134/176)[Kremote: Counting objects:  77% (136/176)[Kremote: Counting objects:  78% (138/176)[Kremote: Counting objects:  79% (140/176)[Kremote: Counting objects:  80% (141/176)[Kremote: Counting objects:  81% (143/176)[Kremote: Counting objects:  82% (145/176)[Kremote: Counting objects:  83% (147/176)[Kremote: Counting objects:  84% (148/176)[Kremote: Counting objects:  85% (150/176)[Kremote: Counting objects:  86% (152/176)[Kremote: Counting objects:  87% (154/176)[Kremote: Counting objects:  88% (155/176)[Kremote: Counting objects:  89% (157/176)[Kremote: Counting objects:  90% (159/176)[Kremote: Counting objects:  91% (161/176)[Kremote: Counting objects:  92% (162/176)[Kremote: Counting objects:  93% (164/176)[Kremote: Counting objects:  94% (166/176)[Kremote: Counting objects:  95% (168/176)[Kremote: Counting objects:  96% (169/176)[Kremote: Counting objects:  97% (171/176)[Kremote: Counting objects:  98% (173/176)[Kremote: Counting objects:  99% (175/176)[Kremote: Counting objects: 100% (176/176)[Kremote: Counting objects: 100% (176/176), done.[K
+10.0s 12 remote: Compressing objects:   0% (1/122)[Kremote: Compressing objects:   1% (2/122)[Kremote: Compressing objects:   2% (3/122)[Kremote: Compressing objects:   3% (4/122)[Kremote: Compressing objects:   4% (5/122)[Kremote: Compressing objects:   5% (7/122)[Kremote: Compressing objects:   6% (8/122)[Kremote: Compressing objects:   7% (9/122)[Kremote: Compressing objects:   8% (10/122)[Kremote: Compressing objects:   9% (11/122)[Kremote: Compressing objects:  10% (13/122)[Kremote: Compressing objects:  11% (14/122)[Kremote: Compressing objects:  12% (15/122)[Kremote: Compressing objects:  13% (16/122)[Kremote: Compressing objects:  14% (18/122)[Kremote: Compressing objects:  15% (19/122)[Kremote: Compressing objects:  16% (20/122)[Kremote: Compressing objects:  17% (21/122)[Kremote: Compressing objects:  18% (22/122)[Kremote: Compressing objects:  19% (24/122)[Kremote: Compressing objects:  20% (25/122)[Kremote: Compressing objects:  21% (26/122)[Kremote: Compressing objects:  22% (27/122)[Kremote: Compressing objects:  23% (29/122)[Kremote: Compressing objects:  24% (30/122)[Kremote: Compressing objects:  25% (31/122)[Kremote: Compressing objects:  26% (32/122)[Kremote: Compressing objects:  27% (33/122)[Kremote: Compressing objects:  28% (35/122)[Kremote: Compressing objects:  29% (36/122)[Kremote: Compressing objects:  30% (37/122)[Kremote: Compressing objects:  31% (38/122)[Kremote: Compressing objects:  32% (40/122)[Kremote: Compressing objects:  33% (41/122)[Kremote: Compressing objects:  34% (42/122)[Kremote: Compressing objects:  35% (43/122)[Kremote: Compressing objects:  36% (44/122)[Kremote: Compressing objects:  37% (46/122)[Kremote: Compressing objects:  38% (47/122)[Kremote: Compressing objects:  39% (48/122)[Kremote: Compressing objects:  40% (49/122)[Kremote: Compressing objects:  41% (51/122)[Kremote: Compressing objects:  42% (52/122)[Kremote: Compressing objects:  43% (53/122)[Kremote: Compressing objects:  44% (54/122)[Kremote: Compressing objects:  45% (55/122)[Kremote: Compressing objects:  46% (57/122)[Kremote: Compressing objects:  47% (58/122)[Kremote: Compressing objects:  48% (59/122)[Kremote: Compressing objects:  49% (60/122)[Kremote: Compressing objects:  50% (61/122)[Kremote: Compressing objects:  51% (63/122)[Kremote: Compressing objects:  52% (64/122)[Kremote: Compressing objects:  53% (65/122)[Kremote: Compressing objects:  54% (66/122)[Kremote: Compressing objects:  55% (68/122)[Kremote: Compressing objects:  56% (69/122)[Kremote: Compressing objects:  57% (70/122)[Kremote: Compressing objects:  58% (71/122)[Kremote: Compressing objects:  59% (72/122)[Kremote: Compressing objects:  60% (74/122)[Kremote: Compressing objects:  61% (75/122)[Kremote: Compressing objects:  62% (76/122)[Kremote: Compressing objects:  63% (77/122)[Kremote: Compressing objects:  64% (79/122)[Kremote: Compressing objects:  65% (80/122)[Kremote: Compressing objects:  66% (81/122)[Kremote: Compressing objects:  67% (82/122)[Kremote: Compressing objects:  68% (83/122)[Kremote: Compressing objects:  69% (85/122)[Kremote: Compressing objects:  70% (86/122)[Kremote: Compressing objects:  71% (87/122)[Kremote: Compressing objects:  72% (88/122)[Kremote: Compressing objects:  73% (90/122)[Kremote: Compressing objects:  74% (91/122)[Kremote: Compressing objects:  75% (92/122)[Kremote: Compressing objects:  76% (93/122)[Kremote: Compressing objects:  77% (94/122)[Kremote: Compressing objects:  78% (96/122)[Kremote: Compressing objects:  79% (97/122)[Kremote: Compressing objects:  80% (98/122)[Kremote: Compressing objects:  81% (99/122)[Kremote: Compressing objects:  82% (101/122)[Kremote: Compressing objects:  83% (102/122)[Kremote: Compressing objects:  84% (103/122)[Kremote: Compressing objects:  85% (104/122)[Kremote: Compressing objects:  86% (105/122)[Kremote: Compressing objects:  87% (107/122)[Kremote: Compressing objects:  88% (108/122)[Kremote: Compressing objects:  89% (109/122)[Kremote: Compressing objects:  90% (110/122)[Kremote: Compressing objects:  91% (112/122)[Kremote: Compressing objects:  92% (113/122)[Kremote: Compressing objects:  93% (114/122)[Kremote: Compressing objects:  94% (115/122)[Kremote: Compressing objects:  95% (116/122)[Kremote: Compressing objects:  96% (118/122)[Kremote: Compressing objects:  97% (119/122)[Kremote: Compressing objects:  98% (120/122)[Kremote: Compressing objects:  99% (121/122)[Kremote: Compressing objects: 100% (122/122)[Kremote: Compressing objects: 100% (122/122), done.[K
+10.1s 13 Receiving objects:   0% (1/176)Receiving objects:   1% (2/176)Receiving objects:   2% (4/176)Receiving objects:   3% (6/176)Receiving objects:   4% (8/176)Receiving objects:   5% (9/176)Receiving objects:   6% (11/176)Receiving objects:   7% (13/176)Receiving objects:   8% (15/176)Receiving objects:   9% (16/176)Receiving objects:  10% (18/176)Receiving objects:  11% (20/176)Receiving objects:  12% (22/176)Receiving objects:  13% (23/176)Receiving objects:  14% (25/176)Receiving objects:  15% (27/176)Receiving objects:  16% (29/176)Receiving objects:  17% (30/176)Receiving objects:  18% (32/176)Receiving objects:  19% (34/176)Receiving objects:  20% (36/176)Receiving objects:  21% (37/176)Receiving objects:  22% (39/176)Receiving objects:  23% (41/176)Receiving objects:  24% (43/176)Receiving objects:  25% (44/176)Receiving objects:  26% (46/176)Receiving objects:  27% (48/176)Receiving objects:  28% (50/176)Receiving objects:  29% (52/176)Receiving objects:  30% (53/176)Receiving objects:  31% (55/176)Receiving objects:  32% (57/176)Receiving objects:  33% (59/176)Receiving objects:  34% (60/176)Receiving objects:  35% (62/176)Receiving objects:  36% (64/176)Receiving objects:  37% (66/176)Receiving objects:  38% (67/176)Receiving objects:  39% (69/176)Receiving objects:  40% (71/176)Receiving objects:  41% (73/176)Receiving objects:  42% (74/176)Receiving objects:  43% (76/176)Receiving objects:  44% (78/176)Receiving objects:  45% (80/176)Receiving objects:  46% (81/176)remote: Total 176 (delta 103), reused 120 (delta 53), pack-reused 0 (from 0)[K
+10.1s 14 Receiving objects:  47% (83/176)Receiving objects:  48% (85/176)Receiving objects:  49% (87/176)Receiving objects:  50% (88/176)Receiving objects:  51% (90/176)Receiving objects:  52% (92/176)Receiving objects:  53% (94/176)Receiving objects:  54% (96/176)Receiving objects:  55% (97/176)Receiving objects:  56% (99/176)Receiving objects:  57% (101/176)Receiving objects:  58% (103/176)Receiving objects:  59% (104/176)Receiving objects:  60% (106/176)Receiving objects:  61% (108/176)Receiving objects:  62% (110/176)Receiving objects:  63% (111/176)Receiving objects:  64% (113/176)Receiving objects:  65% (115/176)Receiving objects:  66% (117/176)Receiving objects:  67% (118/176)Receiving objects:  68% (120/176)Receiving objects:  69% (122/176)Receiving objects:  70% (124/176)Receiving objects:  71% (125/176)Receiving objects:  72% (127/176)Receiving objects:  73% (129/176)Receiving objects:  74% (131/176)Receiving objects:  75% (132/176)Receiving objects:  76% (134/176)Receiving objects:  77% (136/176)Receiving objects:  78% (138/176)Receiving objects:  79% (140/176)Receiving objects:  80% (141/176)Receiving objects:  81% (143/176)Receiving objects:  82% (145/176)Receiving objects:  83% (147/176)Receiving objects:  84% (148/176)Receiving objects:  85% (150/176)Receiving objects:  86% (152/176)Receiving objects:  87% (154/176)Receiving objects:  88% (155/176)Receiving objects:  89% (157/176)Receiving objects:  90% (159/176)Receiving objects:  91% (161/176)Receiving objects:  92% (162/176)Receiving objects:  93% (164/176)Receiving objects:  94% (166/176)Receiving objects:  95% (168/176)Receiving objects:  96% (169/176)Receiving objects:  97% (171/176)Receiving objects:  98% (173/176)Receiving objects:  99% (175/176)Receiving objects: 100% (176/176)Receiving objects: 100% (176/176), 150.27 KiB | 4.85 MiB/s, done.
+10.1s 15 Resolving deltas:   0% (0/103)Resolving deltas:   1% (2/103)Resolving deltas:   2% (3/103)Resolving deltas:   3% (4/103)Resolving deltas:   4% (5/103)Resolving deltas:   5% (6/103)Resolving deltas:   6% (7/103)Resolving deltas:   7% (8/103)Resolving deltas:   8% (9/103)Resolving deltas:   9% (10/103)Resolving deltas:  10% (11/103)Resolving deltas:  11% (12/103)Resolving deltas:  12% (13/103)Resolving deltas:  13% (14/103)Resolving deltas:  14% (15/103)Resolving deltas:  15% (16/103)Resolving deltas:  16% (17/103)Resolving deltas:  17% (18/103)Resolving deltas:  18% (19/103)Resolving deltas:  19% (20/103)Resolving deltas:  20% (21/103)Resolving deltas:  21% (22/103)Resolving deltas:  22% (23/103)Resolving deltas:  23% (24/103)Resolving deltas:  24% (25/103)Resolving deltas:  25% (26/103)Resolving deltas:  26% (27/103)Resolving deltas:  27% (28/103)Resolving deltas:  28% (29/103)Resolving deltas:  30% (31/103)Resolving deltas:  31% (32/103)Resolving deltas:  33% (34/103)Resolving deltas:  34% (36/103)Resolving deltas:  35% (37/103)Resolving deltas:  36% (38/103)Resolving deltas:  37% (39/103)Resolving deltas:  38% (40/103)Resolving deltas:  39% (41/103)Resolving deltas:  40% (42/103)Resolving deltas:  41% (43/103)Resolving deltas:  42% (44/103)Resolving deltas:  43% (45/103)Resolving deltas:  44% (46/103)Resolving deltas:  45% (47/103)Resolving deltas:  46% (48/103)Resolving deltas:  47% (49/103)Resolving deltas:  48% (50/103)Resolving deltas:  49% (51/103)Resolving deltas:  50% (52/103)Resolving deltas:  51% (53/103)Resolving deltas:  52% (54/103)Resolving deltas:  53% (55/103)Resolving deltas:  54% (56/103)Resolving deltas:  55% (57/103)Resolving deltas:  56% (58/103)Resolving deltas:  57% (59/103)Resolving deltas:  58% (60/103)Resolving deltas:  59% (61/103)Resolving deltas:  60% (62/103)Resolving deltas:  61% (63/103)Resolving deltas:  62% (64/103)Resolving deltas:  63% (65/103)Resolving deltas:  64% (66/103)Resolving deltas:  65% (67/103)Resolving deltas:  66% (68/103)Resolving deltas:  67% (70/103)Resolving deltas:  68% (71/103)Resolving deltas:  69% (72/103)Resolving deltas:  70% (73/103)Resolving deltas:  71% (74/103)Resolving deltas:  72% (75/103)Resolving deltas:  73% (76/103)Resolving deltas:  74% (77/103)Resolving deltas:  75% (78/103)Resolving deltas:  76% (79/103)Resolving deltas:  77% (80/103)Resolving deltas:  78% (81/103)Resolving deltas:  79% (82/103)Resolving deltas:  80% (83/103)Resolving deltas:  81% (84/103)Resolving deltas:  82% (85/103)Resolving deltas:  83% (86/103)Resolving deltas:  84% (87/103)Resolving deltas:  85% (88/103)Resolving deltas:  86% (89/103)Resolving deltas:  87% (90/103)Resolving deltas:  88% (91/103)Resolving deltas:  89% (92/103)Resolving deltas:  90% (93/103)Resolving deltas:  91% (94/103)Resolving deltas:  92% (95/103)Resolving deltas:  93% (96/103)Resolving deltas:  94% (97/103)Resolving deltas:  95% (98/103)Resolving deltas:  96% (99/103)Resolving deltas:  97% (100/103)Resolving deltas:  98% (101/103)Resolving deltas:  99% (102/103)Resolving deltas: 100% (103/103)Resolving deltas: 100% (103/103), done.
+10.2s 16 === Repository Version Info ===
+10.2s 17 Commit: 556dc18 | Date: Sun Aug 30 01:12:45 2026 -0500
+10.3s 18 ===============================
+15.5s 19 [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/43.1 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.5/43.1 MB[0m [31m14.2 MB/s[0m eta [36m0:00:04[0m[2K   [91m━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.8/43.1 MB[0m [31m55.6 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12.3/43.1 MB[0m [31m210.4 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━[0m [32m20.4/43.1 MB[0m [31m227.3 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━[0m [32m28.7/43.1 MB[0m [31m238.3 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━[0m [32m37.4/43.1 MB[0m [31m244.0 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m43.1/43.1 MB[0m [31m249.8 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m43.1/43.1 MB[0m [31m249.8 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m43.1/43.1 MB[0m [31m249.8 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m43.1/43.1 MB[0m [31m249.8 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m43.1/43.1 MB[0m [31m249.8 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m43.1/43.1 MB[0m [31m47.2 MB/s[0m eta [36m0:00:00[0m
+15.8s 20 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/18.8 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.6/18.8 MB[0m [31m169.8 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━[0m [32m10.5/18.8 MB[0m [31m154.7 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━[0m [32m16.7/18.8 MB[0m [31m159.9 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m18.8/18.8 MB[0m [31m159.8 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m18.8/18.8 MB[0m [31m159.8 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m18.8/18.8 MB[0m [31m72.5 MB/s[0m eta [36m0:00:00[0m
+15.8s 21 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/992.6 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m992.6/992.6 kB[0m [31m45.4 MB/s[0m eta [36m0:00:00[0m
+15.9s 22 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/331.5 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m331.5/331.5 kB[0m [31m20.3 MB/s[0m eta [36m0:00:00[0m
+15.9s 23 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/7.6 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m7.6/7.6 MB[0m [31m248.7 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m7.6/7.6 MB[0m [31m248.7 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m7.6/7.6 MB[0m [31m107.7 MB/s[0m eta [36m0:00:00[0m
+16.0s 24 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/3.4 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m3.4/3.4 MB[0m [31m193.4 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.4/3.4 MB[0m [31m78.2 MB/s[0m eta [36m0:00:00[0m
+16.1s 25 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/2.4 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m2.4/2.4 MB[0m [31m72.0 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.4/2.4 MB[0m [31m43.6 MB/s[0m eta [36m0:00:00[0m
+16.1s 26 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/1.0 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.0/1.0 MB[0m [31m49.3 MB/s[0m eta [36m0:00:00[0m
+16.2s 27 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/571.5 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m571.5/571.5 kB[0m [31m30.8 MB/s[0m eta [36m0:00:00[0m
+16.2s 28 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/73.1 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m73.1/73.1 kB[0m [31m5.3 MB/s[0m eta [36m0:00:00[0m
+26.4s 29 [?25h[31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+26.4s 30 bigframes 2.39.0 requires google-cloud-bigquery-storage<3.0.0,>=2.30.0, which is not installed.
+26.4s 31 google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
+26.4s 32 google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.
+26.4s 33 google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.
+26.4s 34 google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.34.2 which is incompatible.
+26.4s 35 moviepy 1.0.3 requires decorator<5.0,>=4.0.2, but you have decorator 5.3.1 which is incompatible.[0m[31m
+27.0s 36 [0mNeo4j Secrets Loaded Successfully!
+31.0s 37 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+31.0s 38 
+31.0s 39 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+31.0s 40 Loading dataset medalpaca/medical_meadow_wikidoc...
+33.0s 41 Processing documents and creating training pairs...
+33.3s 42 Saved 9373 documents to /kaggle/working/MedRAG/data/processed/documents.json
+33.3s 43 Saved 9373 training samples to /kaggle/working/MedRAG/data/processed/train_data.json
+59.1s 44 Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 2.10.0+cu128).
+59.1s 45 
+59.1s 46 Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 2.10.0+cu128).
+68.7s 47 Building Dense Index for 9373 documents...
+70.7s 48 BertModel LOAD REPORT from: sentence-transformers/all-MiniLM-L6-v2
+70.7s 49 Key                     | Status     |  |
+70.7s 50 ------------------------+------------+--+-
+70.7s 51 embeddings.position_ids | UNEXPECTED |  |
+70.7s 52 
+70.7s 53 Notes:
+70.7s 54 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+70.7s 55 
+70.7s 56 BertModel LOAD REPORT from: sentence-transformers/all-MiniLM-L6-v2
+70.7s 57 Key                     | Status     |  |
+70.7s 58 ------------------------+------------+--+-
+70.7s 59 embeddings.position_ids | UNEXPECTED |  |
+70.7s 60 
+70.7s 61 Notes:
+70.7s 62 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+86.7s 63 Dense Index saved to /kaggle/working/MedRAG/data/processed/faiss_index.bin
+86.7s 64 Building BM25 Sparse Index...
+87.6s 65 BM25 Index saved to /kaggle/working/MedRAG/data/processed/bm25_index.pkl
+87.6s 66 Initializing GraphIndexer in 'auto' mode...
+87.6s 67 Attempting to connect to Neo4j at neo4j+s://2fa211c8.databases.neo4j.io...
+87.6s 68 Neo4j connection failed: Failed to DNS resolve address 2fa211c8.databases.neo4j.io:7687: [Errno -2] Name or service not known. Falling back to KùzuDB.
+87.6s 69 Connecting to local KùzuDB at /kaggle/working/MedRAG/data/processed/kuzu_db...
+87.8s 70 Creating KùzuDB Schema...
+87.8s 71 Extracting entities using SpaCy and building Graph (kuzu)...
+87.8s 72 Downloading spacy model en_core_web_md...
+88.8s 73 Collecting en-core-web-md==3.8.0
+89.0s 74 Downloading https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.8.0/en_core_web_md-3.8.0-py3-none-any.whl (33.5 MB)
+89.0s 75 Collecting en-core-web-md==3.8.0
+89.0s 76 Downloading https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.8.0/en_core_web_md-3.8.0-py3-none-any.whl (33.5 MB)
+89.4s 77 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.5/33.5 MB 52.5 MB/s eta 0:00:00
+89.6s 78 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.5/33.5 MB 52.5 MB/s eta 0:00:00
+91.5s 79 Installing collected packages: en-core-web-md
+91.7s 80 Installing collected packages: en-core-web-md
+91.8s 81 Successfully installed en-core-web-md-3.8.0
+92.3s 82 Successfully installed en-core-web-md-3.8.0
+92.3s 83 [38;5;2m✔ Download and installation successful[0m
+92.3s 84 You can now load the package via spacy.load('en_core_web_md')
+92.3s 85 [38;5;3m⚠ Restart to reload dependencies[0m
+92.3s 86 If you are in a Jupyter or Colab notebook, you may need to restart Python in
+92.3s 87 order to load all the package's dependencies. You can do this by selecting the
+92.3s 88 'Restart kernel' or 'Restart runtime' option.
+1395.9s 89 Graph Indexing Complete!
+1398.4s 90 Loading tokenizer and configuring formatting...
+1400.0s 91 `torch_dtype` is deprecated! Use `dtype` instead!
+1400.0s 92 
+1400.0s 93 `torch_dtype` is deprecated! Use `dtype` instead!
+1400.0s 94 Loading QLoRA configuration...
+1400.0s 95 Loading Base Model: Qwen/Qwen2.5-1.5B-Instruct
+1417.2s 96 Loading training data...
+1417.4s 97 warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+1417.4s 98 
+1417.4s 99 warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+1435.9s 100 The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151645}.
+1435.9s 101 
+1435.9s 102 The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151645}.
+1435.9s 103 Starting QLoRA Fine-Tuning...
+2146.7s 104 Saving trained adapter...
+2147.0s 105 Training complete! Run generator.py for end-to-end RAG.
+2148.6s 106 Loading documents and indexes...
+2149.4s 107 BertModel LOAD REPORT from: sentence-transformers/all-MiniLM-L6-v2
+2149.4s 108 Key                     | Status     |  |
+2149.4s 109 ------------------------+------------+--+-
+2149.4s 110 embeddings.position_ids | UNEXPECTED |  |
+2149.4s 111 
+2149.4s 112 Notes:
+2149.4s 113 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2149.4s 114 
+2149.4s 115 BertModel LOAD REPORT from: sentence-transformers/all-MiniLM-L6-v2
+2149.4s 116 Key                     | Status     |  |
+2149.4s 117 ------------------------+------------+--+-
+2149.4s 118 embeddings.position_ids | UNEXPECTED |  |
+2149.4s 119 
+2149.4s 120 Notes:
+2149.4s 121 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2152.1s 122 BertForSequenceClassification LOAD REPORT from: cross-encoder/ms-marco-MiniLM-L-6-v2
+2152.1s 123 Key                          | Status     |  |
+2152.1s 124 -----------------------------+------------+--+-
+2152.1s 125 bert.embeddings.position_ids | UNEXPECTED |  |
+2152.1s 126 
+2152.1s 127 Notes:
+2152.1s 128 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2152.1s 129 
+2152.1s 130 BertForSequenceClassification LOAD REPORT from: cross-encoder/ms-marco-MiniLM-L-6-v2
+2152.1s 131 Key                          | Status     |  |
+2152.1s 132 -----------------------------+------------+--+-
+2152.1s 133 bert.embeddings.position_ids | UNEXPECTED |  |
+2152.1s 134 
+2152.1s 135 Notes:
+2152.1s 136 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2154.2s 137 Connecting to Graph Database (kuzu)...
+2154.2s 138 Loading Translation Module (NLLB-200)...
+2168.2s 139 The tied weights mapping and config for this model specifies to tie model.shared.weight to lm_head.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+2168.2s 140 
+2168.2s 141 The tied weights mapping and config for this model specifies to tie model.shared.weight to lm_head.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+2168.2s 142 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.decoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+2168.2s 143 
+2168.2s 144 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.decoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+2168.2s 145 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.encoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+2168.2s 146 
+2168.2s 147 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.encoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+2169.6s 148 Loading Qwen Tokenizer...
+2172.4s 149 Loading Base Model for Generation...
+2175.1s 150 Loading trained QLoRA adapter...
+2175.4s 151 Passing `generation_config` together with generation-related arguments=({'do_sample', 'repetition_penalty', 'max_new_tokens', 'top_p', 'temperature'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+2175.4s 152 
+2175.4s 153 Passing `generation_config` together with generation-related arguments=({'do_sample', 'repetition_penalty', 'max_new_tokens', 'top_p', 'temperature'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+2175.7s 154 
+2175.7s 155 [0] Translating User Query to English...
+2175.8s 156 Both `max_new_tokens` (=300) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+2175.8s 157 
+2175.8s 158 Both `max_new_tokens` (=300) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+2176.0s 159 
+2176.0s 160 [1] Generating Hypothetical Document (HyDE)...
+2182.8s 161 
+2182.8s 162 [2] Executing Hybrid Retrieval with Expanded Query...
+2182.8s 163 Executing Graph Retrieval...
+2182.8s 164 /usr/local/lib/python3.12/dist-packages/spacy/util.py:1800: UserWarning: [W111] Jupyter notebook detected: if using `prefer_gpu()` or `require_gpu()`, include it in the same cell right before `spacy.load()` to ensure that the model is loaded on the correct device. More information: http://spacy.io/usage/v3#jupyter-notebook-gpu
+2182.8s 165 warnings.warn(Warnings.W111)
+2182.8s 166 
+2182.8s 167 /usr/local/lib/python3.12/dist-packages/spacy/util.py:1800: UserWarning: [W111] Jupyter notebook detected: if using `prefer_gpu()` or `require_gpu()`, include it in the same cell right before `spacy.load()` to ensure that the model is loaded on the correct device. More information: http://spacy.io/usage/v3#jupyter-notebook-gpu
+2182.8s 168 warnings.warn(Warnings.W111)
+2184.5s 169 Executing FAISS and BM25 Hybrid Search...
+2184.6s 170 Both `max_new_tokens` (=300) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+2184.6s 171 
+2184.6s 172 Both `max_new_tokens` (=300) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+2188.6s 173 
+2188.6s 174 [3] Translating English Response back to Persian...
+2189.2s 175 
+2189.2s 176 ==========================
+2189.2s 177 MEDRAG PERSIAN ANSWER:
+2189.2s 178 ==========================
+2189.2s 179 علائم کلاسیک دیابت عبارتند از: کاهش وزن، پلی فاگیا، پولی دیپسیا و پلیوری.معلام کمتر شایع شامل تغییرات بینایی، خیس شدن یا بی حس شدن انتهای، خستگی و تغییرات پوست می باشد.
+2189.2s 180 
+2189.2s 181 ==========================
+2189.2s 182 ORIGINAL ENGLISH ANSWER:
+2189.2s 183 ==========================
+2189.2s 184 Classic symptoms of diabetes include: weight loss, polyphagia, polydipsia and polyuria. Less common symptoms include vision changes, tingling or numbness in extremities, fatigue and skin changes.
+2195.1s 185 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+2195.1s 186 cells[i][c] = re.sub('\\\\\|', '|', cell)
+2195.2s 187 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+2195.2s 188 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+2195.9s 189 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+2196.3s 190 [NbConvertApp] Writing 605928 bytes to __notebook__.ipynb
+2198.6s 191 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+2199.5s 192 [NbConvertApp] Writing 764892 bytes to __results__.html
