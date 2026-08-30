@@ -46,6 +46,8 @@ class MedRAGPipeline:
         )
         self.llm = HuggingFacePipeline(pipeline=pipe)
         
+        self.history = []
+        
         def format_docs(docs):
             return "\n\n".join([f"[Doc {i+1}]: {doc.page_content}" for i, doc in enumerate(docs)])
             
@@ -57,14 +59,37 @@ class MedRAGPipeline:
             print(f"\n[3] Translating English Response back to Persian...")
             return self.translator.english_to_persian(response)
             
-        prompt = PromptTemplate.from_template(
+        def format_history():
+            if not self.history:
+                return ""
+            return "".join([f"<|im_start|>user\n{q}<|im_end|>\n<|im_start|>assistant\n{a}<|im_end|>\n" for q, a in self.history])
+
+        # HyDE Chain
+        hyde_prompt = PromptTemplate.from_template(
+            "<|im_start|>system\nYou are a medical assistant.<|im_end|>\n<|im_start|>user\nWrite a brief, hypothetical medical paragraph answering this question: {question}<|im_end|>\n<|im_start|>assistant\n"
+        )
+        self.hyde_chain = hyde_prompt | self.llm | StrOutputParser()
+        
+        def hyde_retrieval(query: str):
+            print("\n[1] Generating Hypothetical Document (HyDE)...")
+            hypothetical_doc = self.hyde_chain.invoke({"question": query})
+            expanded_query = f"{query}\n{hypothetical_doc}"
+            print("\n[2] Executing Hybrid Retrieval with Expanded Query...")
+            return self.retriever.invoke(expanded_query)
+            
+        main_prompt = PromptTemplate.from_template(
             "<|im_start|>system\nYou are a professional medical assistant. Answer the User's question using ONLY the provided context. You must cite your sources using [Doc X] format.<|im_end|>\n"
+            "{chat_history}"
             "<|im_start|>user\nContext:\n{context}\n\nQuestion: {question}<|im_end|>\n<|im_start|>assistant\n"
         )
         
         self.eng_chain = (
-            {"context": self.retriever | format_docs, "question": RunnablePassthrough()}
-            | prompt
+            {
+                "context": RunnableLambda(hyde_retrieval) | format_docs, 
+                "question": RunnablePassthrough(),
+                "chat_history": RunnableLambda(lambda _: format_history())
+            }
+            | main_prompt
             | self.llm
             | StrOutputParser()
         )
@@ -72,13 +97,17 @@ class MedRAGPipeline:
         self.full_chain = (
             RunnableLambda(translate_to_eng)
             | (lambda q: {"eng_query": q, "eng_response": self.eng_chain.invoke(q)})
-            | (lambda x: {"res_pes": translate_to_pes(x["eng_response"]), "res_eng": x["eng_response"]})
+            | (lambda x: {"res_pes": translate_to_pes(x["eng_response"]), "res_eng": x["eng_response"], "eng_query": x["eng_query"]})
         )
 
     def answer_query(self, raw_input: str):
         try:
             query_persian = self.input_processor.process(raw_input)
             result = self.full_chain.invoke(query_persian)
+            
+            # Save to memory
+            self.history.append((result["eng_query"], result["res_eng"]))
+            
             return result["res_pes"], result["res_eng"], []
         except Exception as e:
             print(f"Error during RAG generation: {e}")
