@@ -87,7 +87,7 @@ class MedRAGPipeline:
 if __name__ == "__main__":
     pipeline = MedRAGPipeline()
     # "What are the symptoms of diabetes?" in Persian
-    query_pes = "علائم بیماری دیابت چیست؟" 
+    query_pes = "علائم بیماری دیابت چیست؟"
     res_pes, res_eng, docs = pipeline.answer_query(query_pes)
     
     print("\n" + "="*50)
